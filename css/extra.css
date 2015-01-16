@@ -1,0 +1,554 @@
+@import url(www.sealife.se/SystemCss/baseExtra.css);
+
+/* TABS */
+div.product-tabs {
+    display: none;
+}
+
+div.product-tabs .ajax__tab_body {
+}
+
+div.product-tabs .ajax__tab_header {
+}
+
+div.product-tabs .ajax__tab_outer,
+div.product-tabs .ajax__tab_active .ajax__tab_outer,
+div.product-tabs .ajax__tab_inner,
+div.product-tabs .ajax__tab_active .ajax__tab_inner {
+}
+
+div.product-tabs .ajax__tab_outer {
+}
+
+div.product-tabs .ajax__tab_tab {
+}
+
+div.product-tabs .ajax__tab_hover .ajax__tab_tab {
+}
+
+div.product-tabs .ajax__tab_active .ajax__tab_tab {
+}
+
+
+/* MY PAGES */
+div.fastcartmypages {
+}
+
+.page-mypages .ajax__tab_body {
+}
+
+.page-mypages div.CustomerProfileAddressWrapper .ajax__tab_body {
+}
+
+.page-mypages div.ContentAreaBodyMyPages {
+}
+
+.page-mypages .ajax__tab_header {
+}
+
+.page-mypages .ajax__tab_outer,
+.page-mypages .ajax__tab_active .ajax__tab_outer,
+.page-mypages .ajax__tab_inner,
+.page-mypages .ajax__tab_active .ajax__tab_inner {
+}
+
+.page-mypages .ajax__tab_outer {
+}
+
+.page-mypages .ajax__tab_default .ajax__tab_tab {
+}
+
+.page-mypages .ajax__tab_hover .ajax__tab_tab {
+}
+
+.page-mypages .ajax__tab_active .ajax__tab_tab {
+}
+
+table.CustomerProfile td {
+}
+
+td.CustomerProfileLabel span.Checkout, div.OrderInfoItem span.Checkout {
+}
+
+div.CustomerProfileAddressHeader {
+}
+
+td.CustomerInfoProfileSubmit {
+}
+
+table.MyPagesSettingsTableCssClass tr {
+}
+
+table.MyPagesSettingsTableCssClass tr.MyPagesSettingsSaveSettingsCssClass {
+}
+
+table.MyPagesSettingsTableCssClass td {
+}
+
+tr.MyPagesSettingsNewsLetterCssClass span,
+tr.MyPagesSettingsCommunicationCultureCssClass span,
+tr.MyPagesSettingsMessageToShopSubjectCssClass span,
+tr.MyPagesSettingsMessageToShopContentCssClass span {
+}
+
+/* MY PAGES (MyPages.aspx) */
+div.LoadCustomerProfile {
+}
+
+table.LoadCustomerProfileForm {
+}
+
+table.LoadCustomerProfileForm td {
+}
+
+table.LoadCustomerProfileForm span.Checkout {
+}
+
+div.ErrorMsgBodyWrapper {
+}
+
+div.ErrorMsgTitle {
+}
+
+div.CustomerInfoCreateProfileFormHeader {
+}
+
+div.CustomerInfoCreateProfileFormWrapper {
+}
+
+span.OrderHistoryLabel {
+}
+
+span.OrderHistoryValue {
+}
+
+div.OrderHistoryWrapper table.PlacedOrderDetailsBody {
+}
+
+div.OrderHistoryWrapper table.PlacedOrderDetailsBody div.PlacedOrderDetailsCart td {
+}
+
+div.OrderHistoryWrapper td.PlacedOrderDetailsCart {
+}
+
+div.OrderHistoryWrapper td.PlacedOrderDetailsShipping {
+}
+
+div.OrderHistoryWrapper table.CartContents {
+}
+
+div.OrderHistoryWrapper table.CartContents td.CartContentsHeader {
+}
+
+div.OrderHistoryWrapper div.PlacedOrderDetailsCart td.LastCol {
+}
+
+div.OrderHistoryWrapper td.CartTotalArticleSum {
+}
+
+div.OrderHistoryWrapper table.CartContents td.FirstCol {
+}
+
+div.OrderHistoryWrappertd.CartArticleSpacer {
+}
+
+div.OrderHistoryWrapper td.CartContentsHeader {
+}
+
+div.OrderHistoryWrapper td.CartArticleSums {
+}
+
+/* RETAILER LOG IN */
+.retailer-body {
+}
+
+div.retailer-culture-wrapper {
+}
+
+div.retailer-culture-wrapper img {
+}
+
+div.retailer-login-wrapper {
+}
+
+div.retailer-login-header {
+}
+
+div.retailer-login-header img {
+}
+
+div.retailer-login-body {
+}
+
+div.retailer-login-form {
+}
+
+div.retailer-login-wrapper div.login-user,
+div.retailer-login-wrapper div.login-password {
+}
+
+div.retailer-login-wrapper div.login-user span,
+div.retailer-login-wrapper div.login-password span {
+}
+
+div.retailer-login-wrapper div.login-user input,
+div.retailer-login-wrapper div.login-password input {
+}
+
+div.retailer-login-wrapper div.login-submit {
+}
+
+div.retailer-login-footer {
+}
+
+div.retailer-login-wrapper p {
+}
+
+div.retailer-login-wrapper span {
+}
+
+div.sendEmailPopupLink {
+}
+
+div.registerForAccountLink {
+}
+
+/* SITEMAP */
+.page-sitemap div.content {
+}
+
+.page-sitemap div.PageDetailsHeader h1 {
+}
+
+div.siteMapLeft {
+}
+
+div.siteMapRight {
+}
+
+h1.sitemapHeader {
+}
+
+/* PAYMENT ERROR PAGE */
+.page-paymenterror div.paymentErrorMessage {
+}
+
+.page-paymenterror p.paymenterrormessagetitle {
+}
+
+/* PAYPAL & PAYSON PAGES */
+.page-paypalcancel div.paymentErrorMessage,
+.page-paysoncancel div.paymentErrorMessage {
+}
+
+/* ERROR PAGE */
+.errorPage {
+}
+
+.errorPageLogo {
+}
+
+.errorPageHeader {
+}
+
+.errorPage li {
+}
+
+.errorPageListHeader {
+}
+
+.errorPageMail {
+}
+
+.errorPageButton {
+}
+
+/* PRODUCT ERROR PAGE */
+div.error-no-product {
+}
+
+div.error-no-product h1 {
+}
+
+div.error-no-product a {
+}
+
+div.error-no-product h2 {
+}
+
+/* TIP A FRIEND */
+div.SendTipMain {
+}
+
+div.SendTipMain div {
+}
+
+div.SendTipHeader {
+}
+
+span.SendTipHeaderText {
+}
+
+div.SendTipMain td {
+}
+
+div.SendTipMain a, div.SendTipMain a:visited {
+}
+
+div.SendTipMain a:hover {
+}
+
+div.SendTipModalPopupBackground {
+}
+
+/* BLOG CONTROL */
+.BlogControlImageWrapperCssClass {
+}
+
+.BlogControlContentWrapperCssClass {
+}
+.BlogControlContentWrapperCssClass div, .BlogControlContentWrapperCssClass textarea {
+}
+
+#grid_slider {
+}
+
+/* SPEED ORDER */
+table.speed-order-wrapper {
+}
+
+td.speed-order-info {
+}
+
+td.speed-order-info fieldset {
+}
+
+table.speed-order-form tr:first-child td {
+}
+
+table.speed-order-form td {
+}
+
+
+/* Culture Selector */
+.culture-selector-current, .image-not-clickable, .disabled {
+}
+
+/* Klarna monthly cost popup */
+div.popup-info-box-link {
+}
+
+div.popup-info-box-content {
+}
+
+div.popup-info-box {
+}
+
+div.popup-info-box-close {
+}
+
+/* PRODUCT PRINT */
+.showProductPrintBody span {
+}
+
+.showProductPrintBody {
+}
+.ProductTableCssClass {
+}
+
+.showProductPrintBody .title {
+}
+
+.showProductPrintBody .table-column-1 {
+}
+.showProductPrintBody .table-column-padder {
+}
+.showProductPrintBody .table-column-2 {
+}
+
+.showProductPrintBody .ProductNameCssClass {
+}
+.showProductPrintBody .ProductSubNameCssClass {
+}
+.showProductPrintBody .ProductDescriptionCssClass {
+}
+.showProductPrintBody .logo {
+}
+
+.showProductPrintBody .textvalue {
+}
+.showProductPrintBody .textvalue span {
+}
+.showProductPrintBody .textvalue .text {
+}
+.showProductPrintBody .textvalue .value {
+}
+
+#spp_ProductPriceLabelCssClass {
+}
+#spp_ProductPriceLabelCssClass .text {
+}
+#spp_ProductPriceLabelCssClass .value {
+}
+
+.ProductImageCssClass {
+}
+
+.ProductPriceValueCssClass
+{
+}
+
+.ProductInformationCssClass, .ProductSpecificationsCssClass
+{
+}
+
+.ProductShortDescriptionCssClass {
+}
+
+.ProductDescriptionCssClass {
+}
+
+.ProductSpecificationsCssClass .specification {
+}
+.ProductSpecificationsCssClass .RowCssClass {
+}
+.ProductSpecificationsCssClass .AlternateRowCssClass {
+}
+
+.ItemTitleCssClass
+{
+}
+.ItemDataCssClass
+{
+}
+
+
+
+.showProductPrintBody
+{
+}
+
+.showProductPrintBody .ProductTable
+{
+}
+
+td.table-column-1
+{
+}
+
+td.table-column-2
+{
+}
+
+td.table-column-padder
+{
+}
+
+.showProductPrintBody .ProductName
+{
+}
+
+.showProductPrintBody .ProductSubName
+{
+}
+
+.showProductPrintBody .ProductDescription, .showProductPrintBody .ProductShortDescription
+{
+}
+
+td.table-column-2 div.textvalue
+{
+}
+
+div.textvalue span.text
+{
+}
+
+.showProductPrintBody .ProductPriceValue
+{
+}
+
+div.ProductSpecifications
+{
+}
+
+div.ProductSpecifications span.title
+{
+}
+
+.showProductPrintBody .Row
+{
+}
+
+.showProductPrintBody .AlternateRow
+{
+}
+
+.showProductPrintBody .ItemTitle
+{
+}
+
+.showProductPrintBody .ItemData
+{
+}
+
+/* --------------- START ThemePreviewStatus ------------------ */
+.ThemePreviewWrapper
+{
+}
+
+.ThemePreviewResetButtonBackground
+{
+}
+
+.ThemePreviewResetButtonText
+{
+}
+
+.ThemePreviewResetButton:hover
+{
+}
+
+
+/* --------------- START LoginAdminAsCustomerStatus ------------------ */
+.LoginAdminAsCustomerWrapper
+{
+}
+
+.LoginAdminAsCustomerDivBackground
+{
+}
+
+.LoginAdminAsCustomerWrapperLabelLoggedInAsCssClass
+{
+}
+
+/* Filter Control */
+.FilterContainer
+{
+}
+
+.FilterItem
+{
+}
+
+.FilterItem span
+{
+}
+
+.FilterItem select
+{
+}
+
+.QuantityNumberValidatorDiv {
+}
+
+/* UNSORTED */
+.popupBackground {
+}
+
+body.popupBackground table {
+}
+
+.ChangePasswordWrapperCssClass {
+}

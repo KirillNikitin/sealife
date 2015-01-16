@@ -1,0 +1,1261 @@
+@import url(/SystemCss/baseStylefastcheckout.css);
+
+/* LAYOUT AND COMMON STYLES  */
+
+.optionslist>a:focus, .optionslist>a:active {}
+
+.optionslist>a, .optionslist>a:visited {}
+
+ul,li
+{}
+
+#step1, #step2, #step3, #step4, #step5, #step5, #step6 {}
+
+.step7 {
+    width: 990px;
+}
+
+.step1-title, .step2-title, .step3-title, .step4-title, .step5-title, .step6-title {}
+
+.step3-title {}
+
+.step4-title {}
+
+.step5-title {}
+
+.step6-title {}
+
+.boxinner {}
+
+.continue-shopping {}
+
+.box h1 {font-size: 20px; }
+
+.box h2 {}
+
+.help {}
+
+.help a {}
+
+.upFastCart{
+    margin: 0 0 0 0px;
+}
+
+#help1, #help2, #help3, #help4, #help5
+{}
+
+#help1 span, #help2 span, #help3 span, #help4 span, #help5 span
+{}
+
+#help1 ul, #help2 ul, #help3 ul, #help4 ul, #help5 ul
+{}
+
+
+/* FB centered over cart/checkout */
+#fancybox-wrap {}
+
+form, .boxcontentleft {}
+
+.fast-customer-info-leftcol
+{}
+
+.boxcontentleft {}
+
+.boxcontentright {}
+
+
+/* STYLE AND POSITIONING  */
+
+.upFastCart .box {
+    margin: 0 auto 10px;
+    float: none;
+}
+.upFastCart .box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.optionslist {}
+
+.country-options-boxtop, .payment-options-boxtop, .freight-options-boxtop {}
+
+.optionbox {}
+
+.optionbox:hover {}
+
+.optionbox-selected {}
+
+.optionbox-nooptions {}
+
+.optionbox-nooptions:hover {}
+
+.optionbox-nooptions-selected {}
+
+.upFastCountrySelect a:last-child,
+.upFastPaymentSelect .optionslist:last-child .optionbox-item5,
+.upFastPaymentSelect .optionslist:last-child .optionbox-item6,
+.upFastPaymentSelect .paymentoptionbox-item6
+{}
+
+.optionbox-nooptions-selected:hover
+{}
+
+
+.optionbox img, .optionbox-nooptions img, .optionbox-selected img, .optionbox-nooptions-selected img {}
+
+.optionbox p, .optionbox-selected p {}
+
+.options-boxtop-nooptions /* Alternativ utan tillval */
+{}
+
+.options-boxtop-1  /* Alternativ 1 fr vÃ¤nster */
+{}
+
+.options-boxtop-2  /* Alternativ 2 fr vÃ¤nster */
+{}
+
+.options-boxtop-3  /* Alternativ 3 fr vÃ¤nster */
+{}
+
+.options-boxtop-4  /* Alternativ 4 fr vÃ¤nster */
+{}
+
+.options-boxtop-5  /* Alternativ 5 fr vÃ¤nster */
+{}
+
+.options-boxtop-6  /* Alternativ 6 fr vÃ¤nster */
+{}
+
+.country-options, .payment-options {}
+
+.payment-no-active-payment-methods
+{}
+
+.country-select-other-name {}
+
+.country-options-inner, .payment-options-inner {}
+
+.country-options-boxtop {}
+
+.country-options-inner p {}
+
+.payment-options-inner p {}
+
+.FastPaymentSelectLabelCard
+{padding: 0; }
+
+.fastcart-sums-wrapper
+{}
+
+.fastcart-campaign-input
+{}
+
+.fastcart-campaign-input input[type="text"] {
+    height: 23px;
+    line-height: 22px;
+    padding: 0 2px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.fastcart-campaign-input p
+{position: relative;}
+
+.countries-left, .countries-middle, .countries-right {}
+
+.basketitem {}
+
+.even {}
+
+.itemamount {}
+
+.itemamount .less {width: 19px; height: 22px; background: url("../i/less-on.png") no-repeat; border: none; margin: 0; cursor: pointer;}
+.itemamount .less.zero {width: 19px; height: 22px; background: url("../i/less-off.png") no-repeat; border: none; cursor: default;}
+.itemamount .more {width: 19px; height: 22px; background: url("../i/more-on.png") no-repeat; border: none; margin: 0; cursor: pointer;}
+.itemamount input.quantity {width: 20px; text-align: center; border: solid 1px #999; margin: 0 7px; height: 18px;}
+
+.itemamount .less, .itemamount .more, .itemamount .quantity {display: inline-block; vertical-align: top;}
+
+.itemimage, .itemimagenoimage, .iteminfo, .itemprice, .itemamount, .itemtotal {}
+
+
+.itemimage {
+    width: 75px;
+    height: 75px;
+}
+
+.itemimagenoimage
+{
+    width: 75px;
+    height: 75px;
+}
+
+.itemimage a {
+    width: 75px;
+    height: 75px;
+    display: block;
+    line-height: 76px;
+    text-align: center;
+}
+
+.itemimage img {
+    margin: 0;
+    max-height: 70px;
+    max-width: 70px;
+    vertical-align: middle;
+}
+
+.iteminfo {
+    width: 350px;
+    margin-top: 2px;
+}
+
+.iteminfo p, .tableheaders p {}
+
+.iteminfo-name, .itemprice, .itemtotal {}
+
+.iteminfo-name a {}
+
+.iteminfo-name a:hover
+{}
+
+.itemprice {}
+
+.itemtotal {}
+
+.iteminfo-brand {}
+
+.iteminfo-attributes, .iteminfo-attributes a, .iteminfo-comment, .iteminfo-comment a {}
+
+.iteminfo-comment span
+{}
+
+.txt-itemamount, .itemamount input, .itemamount img, .itemamount a {}
+
+.itemamount input[type=text] {}
+
+
+.tableheaders {}
+
+.tableheaders p {}
+
+.tableheaders-article {
+    width: 460px;
+}
+
+.tableheaders-price, .tableheaders-amount, .tableheaders-total {}
+
+.tableheaders-total {
+    width: 200px;
+}
+
+.basketsums {}
+
+.itemtotals {}
+
+.verybottom .itemtotals
+{}
+
+.largeinfo p {}
+
+.smallinfo p, .smallinfo span {}
+
+.aleft {}
+
+.aright {}
+
+
+
+.campaigncodetitle {}
+
+
+.upFastDiscount .campaign-button {
+    margin: -1px 0;
+    padding: 6px 10px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.grandtotal {}
+
+.verybottom .fast-cart-summary {}
+
+.submitter {}
+
+.submitter a {}
+
+.submitter a:hover {}
+
+.nextstep-btn {}
+
+.fast-submit-btn-icon
+{}
+
+.fast-submit-btn-text
+{}
+
+.approve {}
+
+.verybottom {}
+
+.totalsum {}
+
+
+.totalvat {}
+
+.getinfo {}
+
+.getinfo p
+{}
+
+body .getinfo a.get-customer-info-btn {
+    margin-top: 12px;
+}
+
+.get-decidas-info
+{}
+
+
+.hamta-personnummer
+{}
+
+.loggain {}
+
+.loggain > span
+{
+    margin-bottom: 5px;
+}
+
+.aForgotPassword, .aBackToLogin
+{}
+
+.aForgotPassword, .aBackToLogin:hover {}
+
+.boxcontentleft p {}
+
+.fleft
+{}
+
+.fleft input {}
+
+.formrow
+{}
+
+.fright input {}
+
+.fright p {}
+
+.fright
+{}
+
+
+.label, .fright a, .long-opt {}
+
+.long-opt
+{}
+
+.checkbox-label
+{}
+
+.long {}
+
+.long input {}
+
+.extraadresstoggle a
+{}
+
+.fastCustomerInfoCOAddress input, .fastCustomerInfoAlternativeCOAddress input
+{}
+
+
+
+.showhide {}
+
+.boxcontentright p {
+    font-size: 14px;
+}
+
+.boxcontentright select {
+    width: auto;
+    font-size: 14px;
+}
+
+
+.divComment1 {}
+
+.comment1, .comment2 {}
+
+.passwordbox {}
+
+.step6-error {}
+
+.step1-error {}
+
+.step1-error {}
+
+.upErrorMessage
+{}
+
+.step1-error-inner, .step6-error-inner {}
+
+.step1-error-inner
+{}
+
+.step1-error-inner h1, .step6-error-inner h1 {}
+
+.error6
+{}
+
+.step6-error-inner ul
+{}
+
+.step6-error-inner li
+{}
+
+.step6-error-inner label
+{}
+
+.amounterror {}
+
+.amounterror-inner {}
+
+.error1, .error6 {}
+
+#bodyFastLoginBox
+{}
+
+.fast-login-box
+{}
+
+.fast-login-box-inner
+{}
+
+.fast-login-box-inner-header
+{}
+
+.fast-login-box-inner-reminder
+{}
+
+.fast-login-box-inner input[type=text]
+{}
+
+.fast-login-box-inner input[type=password]
+{}
+
+.fast-login-btn
+{}
+
+.btn-delete {}
+
+.btn-delete img {}
+
+.btn-delete input {}
+
+.btn-delete  .fast-btn-delete-item:hover
+{}
+
+.subtlebutton {}
+
+.subtlebutton:hover {}
+
+.byt-kundtyp {}
+
+.adress-land
+{}
+
+.adress-land div {}
+
+.adress-landnamn
+{}
+
+.adress-land img {}
+
+.adress-land span
+{
+    display:none;
+}
+
+p .flagicon
+{}
+
+.required {}
+
+div.MainAreaCheckout {}
+
+.optionbox-item1
+{}
+
+.upFastCountrySelect .optionbox-item5
+{}
+
+.optionbox-item6
+{}
+.optionbox-selected
+{}
+.optionbox-selected:hover
+{}
+.spanPaymentTypePaymentMessageValue
+{}
+
+.payment-options-choices
+{}
+
+.paymentInfoPaymentSelectCardEdit
+{}
+
+.payment-options-inner span + table {
+    margin-top: 5px;
+}
+
+
+.payment-options-inner td {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.payment-options-inner label {
+
+}
+
+.upFastPaymentSelect .optionbox br {
+    display: none;
+}
+
+
+.FastPaymentSelectLabelHirePurchase, .fast-payment-monthly-cost-span
+{}
+
+.fast-payment-monthly-cost-span
+{}
+
+.FastPaymentSelectLabelHirePurchase
+{}
+.hire-purchase-list
+{}
+.hire-purchase-div
+{}
+
+.hire-purchase-div table
+{}
+.hire-purchase-div td
+{}
+
+.hire-purchase-monthly-cost-table
+{}
+
+.hire-purchase-monthly-cost-shop-info
+{}
+/* FB-Info */
+.fb-info {}
+
+.fb-info .fb-wrapper {}
+
+.fb-info h2 {}
+
+.fb-info a {}
+
+.fb-info a:hover {}
+
+.fb-buttonwrapper, .btnLoadProfile-wrapper, .btnForgotPassword-wrapper {}
+
+.fb-buttonwrapper a, .btnLoadProfile-wrapper a, .btnForgotPassword-wrapper a {}
+
+.fb-buttonwrapper a:hover, .btnLoadProfile-wrapper a:hover, .btnForgotPassword-wrapper a:hover {}
+
+.loadProfile-error
+{}
+
+/* Visa/dÃ¶lj formulÃ¤rfÃ¤lt */
+.hidethis, .visible {}
+.showthis, .invisible {}
+
+/* Visa aktivt formulÃ¤rfÃ¤lt */
+.focusField
+{}
+
+.idleField
+{}
+
+.fast-customer-info-pid-disabled
+{}
+
+/* td.SiteWrapper
+{} */
+
+.emptycart .step1-title {}
+.emptycart .optionslist span {}
+.emptycart .optionslist a {}
+.emptycart .help {}
+
+
+
+
+
+/* Freight icons */
+.freighticon {}
+
+.upFastFreightSelector .optionbox-nooptions-selected, .upFastFreightSelector .optionbox-nooptions
+{}
+
+.upFastFreightSelector .optionbox-nooptions:hover
+{}
+
+.upFastFreightSelector .optionbox-nooptions-selected
+{}
+
+.freight-name
+{}
+
+.freight-cost
+{}
+
+/* Egendefinierade */
+.freight-1 {}
+.freight-2 {}
+.freight-3 {}
+.freight-4 {}
+.freight-5 {}
+.freight-6 {}
+.freight-7 {}
+.freight-8 {}
+.freight-9 {}
+.freight-10 {}
+
+.freightoptionbox-item5, .freightoptionbox-item10, .freightoptionbox-item15, .freightoptionbox-item20
+{}
+.subtlebutton {cursor: pointer;}
+
+/* Payment icons */
+.paymenticon {}
+.payment-un {} /* Fler alternativ */
+.payment-1 {} /* PostfÃ¶rskottSE */
+.payment-1-NO {} /* PostfÃ¶rskott Norge */
+.payment-2 {} /* Egen Faktura SE */
+.payment-3 {} /* Kontant vid avhÃ¤mtning */
+.payment-4 { width: 115px;
+    background-image: url("../i/logo-kortbetalning.png");
+} /* Betalkort */
+.payment-5 {} /* Bank/Postgiro */
+.payment-6 {} /* Paybybill*/
+.payment-8 {} /* Egen betalningsmetod 1 */
+.payment-9 {} /* Egen betalningsmetod 2 */
+.payment-10 {} /* Egen betalningsmetod 3 */
+.payment-11 {} /* Egen betalningsmetod 4 */
+.payment-12 {} /* Egen betalningsmetod 5 */
+.payment-15 {} /* Direktbetalning (default)*/
+.payment-16 {} /* Handelsbanken NetPay  */
+.payment-17 {} /* Faktura Handelsbanken */
+.payment-18 {} /* SveaEkonomi - sweawebpay faktura */
+.payment-13 {} /* FakturaKredSE */
+.payment-14 {} /* Delbetalning */
+.payment-19 {} /* FakturaKredFI */
+.payment-20 {} /* FakturaKredDK */
+.payment-21 {} /* FakturaKreditorNO */
+.payment-22 {} /* DelbetalningKredFI */
+.payment-23 {} /* DelbetalningKredDK */
+.payment-24 {} /* DelbetalningKredNO */
+.payment-31 {} /* FakturaKredDE */
+.payment-32 {} /* DelbetalningDE */
+.payment-33 {} /* FakturaKredNL */
+.payment-34 {} /* DelbetalningNL */
+.payment-25 {} /* Payson - paysonloggan */
+.payment-26 {} /* FakturaIntrum - intrum justitia */
+.payment-27 {} /* Vouchers - designa presentkort */
+.payment-28 {} /* GEMoneyBank - logga*/
+.payment-29 {} /* PostenbetalvÃ¤xel */
+.payment-30 {} /* PayPal - bara logga */
+.payment-35 {} /* Payson Faktura */
+
+/* Flag icons */
+.flagicon {margin-bottom: 0; }
+.flag-ad {} /* andorra */
+.flag-ae {} /* united arab emirates */
+.flag-af {} /* afghanistan */
+.flag-ag {} /* antigua and barbuda */
+.flag-ai {} /* anguilla */
+.flag-al {} /* albania */
+.flag-am {} /* armenia */
+.flag-an {}
+.flag-ao {} /* angola */
+.flag-aq {} /* antarctica */
+.flag-ar {} /* argentina */
+.flag-as {} /* american samoa */
+.flag-at {} /* austria */
+.flag-au {} /* australia */
+.flag-aw {} /* aruba */
+.flag-ax {} /* Ã¥land islands */
+.flag-az {} /* azerbaijan */
+.flag-ba {} /* bosnia and herzegovina */
+.flag-bb {} /* barbados */
+.flag-bd {} /* bangladesh */
+.flag-be {} /* belgium */
+.flag-bf {} /* burkina faso */
+.flag-bg {} /* bulgaria */
+.flag-bh {} /* bahrain */
+.flag-bi {} /* burundi */
+.flag-bj {} /* benin */
+.flag-bl {} /* saint barthÃ©lemy */
+.flag-bm {} /* bermuda */
+.flag-bn {} /* brunei darussalam */
+.flag-bo {} /* bolivia, plurinational state of */
+.flag-bq {} /* bonaire, saint eustatius and saba */
+.flag-br {} /* brazil */
+.flag-bs {} /* bahamas */
+.flag-bt {} /* bhutan */
+.flag-bw {} /* botswana */
+.flag-bv {} /* bouvet island */
+.flag-by {} /* belarus */
+.flag-bz {} /* belize */
+.flag-ca {} /* canada */
+.flag-cc {} /* cocos (keeling) islands */
+.flag-cd {} /* congo, the democratic republic of the */
+.flag-cf {} /* central african republic */
+.flag-cg {} /* congo */
+.flag-ch {} /* switzerland */
+.flag-ci {} /* cÃ´te d'ivoire */
+.flag-ck {} /* cook islands */
+.flag-cl {} /* chile */
+.flag-cm {} /* cameroon */
+.flag-cn {} /* china */
+.flag-co {} /* colombia */
+.flag-cr {} /* costa rica */
+.flag-cs {}
+.flag-cu {} /* cuba */
+.flag-cv {} /* cape verde */
+.flag-cw {} /* curaÃ§ao */
+.flag-cx {} /* christmas island */
+.flag-cy {} /* cyprus */
+.flag-cz {} /* czech republic */
+.flag-de {} /* germany */
+.flag-dj {} /* djibouti */
+.flag-dk {} /* denmark */
+.flag-dm {} /* dominica */
+.flag-do {} /* dominican republic */
+.flag-dz {} /* algeria */
+.flag-ec {} /* ecuador */
+.flag-ee {} /* estonia */
+.flag-eg {} /* egypt */
+.flag-eh {} /* western sahara */
+.flag-en {}
+.flag-er {} /* eritrea */
+.flag-es {} /* spain */
+.flag-et {} /* ethiopia */
+.flag-eu {}
+.flag-fa {}
+.flag-fi {} /* finland */
+.flag-fj {} /* fiji */
+.flag-fk {} /* falkland islands (malvinas) */
+.flag-fm {} /* micronesia, federated states of */
+.flag-fo {} /* faroe islands */
+.flag-fr {} /* france */
+.flag-ga {} /* gabon */
+.flag-gb {} /* united kingdom */
+.flag-gd {} /* grenada */
+.flag-ge {} /* georgia */
+.flag-gf {} /* french guiana */
+.flag-gg {} /* guernsey */
+.flag-gh {} /* ghana */
+.flag-gi {} /* gibraltar */
+.flag-gl {} /* greenland */
+.flag-gm {} /* gambia */
+.flag-gn {} /* guinea */
+.flag-gp {} /* guadeloupe */
+.flag-gq {} /* equatorial guinea */
+.flag-gr {} /* greece */
+.flag-gs {} /* south georgia and the south sandwich islands */
+.flag-gt {} /* guatemala */
+.flag-gu {} /* guam */
+.flag-gw {} /* guinea-bissau */
+.flag-gy {} /* guyana */
+.flag-hk {} /* hong kong */
+.flag-hm {} /* heard island and mcdonald islands */
+.flag-hn {} /* honduras */
+.flag-hr {} /* croatia */
+.flag-ht {} /* haiti */
+.flag-hu {} /* hungary */
+.flag-ia {}
+.flag-id {} /* indonesia */
+.flag-ie {} /* ireland */
+.flag-ih {}
+.flag-il {} /* israel */
+.flag-im {} /* isle of man */
+.flag-in {} /* india */
+.flag-io {} /* british indian ocean territory */
+.flag-iq {} /* iraq */
+.flag-ir {} /* iran, islamic republic of */
+.flag-is {} /* iceland */
+.flag-it {} /* italy */
+.flag-je {} /* jersey */
+.flag-jm {} /* jamaica */
+.flag-jo {} /* jordan */
+.flag-jp {} /* japan */
+.flag-ke {} /* kenya */
+.flag-kg {} /* kyrgyzstan */
+.flag-kh {} /* cambodia */
+.flag-ki {} /* kiribati */
+.flag-km {} /* comoros */
+.flag-kn {} /* saint kitts and nevis */
+.flag-ko {}
+.flag-kp {} /* korea, democratic people's republic of */
+.flag-kr {} /* korea, republic of */
+.flag-kw {} /* kuwait */
+.flag-ky {} /* cayman islands */
+.flag-kz {} /* kazakhstan */
+.flag-la {} /* lao people's democratic republic */
+.flag-lb {} /* lebanon */
+.flag-lc {} /* saint lucia */
+.flag-li {} /* liechtenstein */
+.flag-lk {} /* sri lanka */
+.flag-lr {} /* liberia */
+.flag-ls {} /* lesotho */
+.flag-lt {} /* lithuania */
+.flag-lu {} /* luxembourg */
+.flag-lv {} /* latvia */
+.flag-ly {} /* libyan arab jamahiriya */
+.flag-ma {} /* morocco */
+.flag-mc {} /* monaco */
+.flag-md {} /* moldova, republic of */
+.flag-me {} /* montenegro */
+.flag-mf {} /* saint martin (french part) */
+.flag-mg {} /* madagascar */
+.flag-mh {} /* marshall islands */
+.flag-mk {} /* macedonia, the former yugoslav republic of */
+.flag-ml {} /* mali */
+.flag-mm {} /* myanmar */
+.flag-mn {} /* mongolia */
+.flag-mo {} /* macao */
+.flag-mp {} /* northern mariana islands */
+.flag-mq {} /* martinique */
+.flag-mr {} /* mauritania */
+.flag-ms {} /* montserrat */
+.flag-mt {} /* malta */
+.flag-mu {} /* mauritius */
+.flag-mw {} /* malawi */
+.flag-mv {} /* maldives */
+.flag-mx {} /* mexico */
+.flag-my {} /* malaysia */
+.flag-mz {} /* mozambique */
+.flag-na {} /* namibia */
+.flag-nc {} /* new caledonia */
+.flag-ne {} /* niger */
+.flag-nf {} /* norfolk island */
+.flag-ng {} /* nigeria */
+.flag-ni {} /* nicaragua */
+.flag-nl {} /* netherlands */
+.flag-no {} /* norway */
+.flag-np {} /* nepal */
+.flag-nr {} /* nauru */
+.flag-nu {} /* niue */
+.flag-nz {} /* new zealand */
+.flag-oa {}
+.flag-oe {}
+.flag-ol {}
+.flag-om {} /* oman */
+.flag-op {}
+.flag-pa {} /* panama */
+.flag-pe {} /* peru */
+.flag-pf {} /* french polynesia */
+.flag-pg {} /* papua new guinea */
+.flag-ph {} /* philippines */
+.flag-pk {} /* pakistan */
+.flag-pl {} /* poland */
+.flag-pm {} /* saint pierre and miquelon */
+.flag-pn {} /* pitcairn */
+.flag-pr {} /* puerto rico */
+.flag-ps {} /* palestinian territory, occupied */
+.flag-pt {} /* portugal */
+.flag-pw {} /* palau */
+.flag-py {} /* paraguay */
+.flag-qa {} /* qatar */
+.flag-re {} /* rÃ©union */
+.flag-ro {} /* romania */
+.flag-rs {} /* serbia */
+.flag-ru {} /* russian federation */
+.flag-rw {} /* rwanda */
+.flag-sa {} /* saudi arabia */
+.flag-sb {} /* solomon islands */
+.flag-sc {} /* seychelles */
+.flag-sd {} /* sudan */
+.flag-se {} /* sweden */
+.flag-sg {} /* singapore */
+.flag-sh {} /* saint helena, ascension and tristan da cunha */
+.flag-si {} /* slovenia */
+.flag-sj {} /* svalbard and jan mayen */
+.flag-sk {} /* slovakia */
+.flag-sl {} /* sierra leone */
+.flag-sm {} /* san marino */
+.flag-sn {} /* senegal */
+.flag-so {} /* somalia */
+.flag-sr {} /* suriname */
+.flag-st {} /* sao tome and principe */
+.flag-sv {} /* el salvador */
+.flag-sx {} /* sint maarten (dutch part) */
+.flag-sy {} /* syrian arab republic */
+.flag-sz {} /* swaziland */
+.flag-ta {}
+.flag-tc {} /* turks and caicos islands */
+.flag-td {} /* chad */
+.flag-tf {} /* french southern territories */
+.flag-tg {} /* togo */
+.flag-th {} /* thailand */
+.flag-tj {} /* tajikistan */
+.flag-tk {} /* tokelau */
+.flag-tl {} /* timor-leste */
+.flag-tm {} /* turkmenistan */
+.flag-tn {} /* tunisia */
+.flag-to {} /* tonga */
+.flag-tr {} /* turkey */
+.flag-tt {} /* trinidad and tobago */
+.flag-tw {} /* taiwan, province of china */
+.flag-tv {} /* tuvalu */
+.flag-tx {}
+.flag-tz {} /* tanzania, united republic of */
+.flag-ua {} /* ukraine */
+.flag-ug {} /* uganda */
+.flag-uk {}
+.flag-um {} /* united states minor outlying islands */
+.flag-un {}
+.flag-un {}
+.flag-un {}
+.flag-us {} /* united states */
+.flag-uy {} /* uruguay */
+.flag-uz {} /* uzbekistan */
+.flag-wa {}
+.flag-va {} /* holy see (vatican city state) */
+.flag-vc {} /* saint vincent and the grenadines */
+.flag-ve {} /* venezuela, bolivarian republic of */
+.flag-wf {} /* wallis and futuna */
+.flag-vg {} /* virgin islands, british */
+.flag-wh {}
+.flag-vi {} /* virgin islands, u.s. */
+.flag-vn {} /* viet nam */
+.flag-ws {} /* samoa */
+.flag-wt {}
+.flag-vu {} /* vanuatu */
+.flag-ye {} /* yemen */
+.flag-yt {} /* mayotte */
+.flag-za {} /* south africa */
+.flag-zm {} /* zambia */
+.flag-zw {} /* zimbabwe */
+
+.upFastCountrySelect .boxinner
+{}
+
+.upFastCountrySelect .optionbox-item5
+{}
+
+.othercountries
+{}
+
+.othercountries li
+{}
+
+.othercountries li a
+{}
+
+.othercountries li a:hover
+{}
+
+.country-options-inner
+{}
+
+.country-options
+{}
+
+.country-options-inner p
+{}
+
+/* BekrÃ¤ftelsesidan */
+.fastcartconfirmationpage div.PlacedOrderDetailsHeader table {}
+
+.fastcartconfirmationpage div.PlacedOrderDetailsHeader {}
+
+.fastcartconfirmationpage .PlacedOrderDetailsHeaderCell1,  .fastcartconfirmationpage .PlacedOrderDetailsHeaderCell2,  .fastcartconfirmationpage .PlacedOrderDetailsHeaderCell1 h1 {}
+
+span.PlacedOrderDetailsOrderNrLabel, span.PlacedOrderDetailsOrderDateLabel {}
+
+.fastcartconfirmationpage .PlacedOrderDetailsHeaderCell1 {}
+
+.fastcartconfirmationpage .PlacedOrderDetailsHeaderCell2 {}
+
+.fastcartconfirmationpage {float: none; margin: 10px 0 0; width: auto; }
+
+.fastcartconfirmationpage div.PlacedOrderDetailsHeader table.CartContents {}
+
+.fastcartconfirmationpage div.PlacedOrderDetailsBody {}
+
+div.PlacedOrderDetailsCart td {}
+
+div.PlacedOrderDetailsCart td.LastCol {}
+
+.fastcartconfirmationpage td.CartTotalArticleSum {}
+
+.fastcartconfirmationpage table.CartContents td.FirstCol {
+
+}
+
+.fastcartconfirmationpage table.CartContents td.FirstCol + td.FirstCol {
+    width: 270px;
+}
+
+.fastcartconfirmationpage .CartArticlePrice,
+.fastcartconfirmationpage .CartArticleQuantityInput,
+.fastcartconfirmationpage .CartContentsHeaderQuantity,
+.fastcartconfirmationpage .CartContentsHeaderPrice,
+.fastcartconfirmationpage .CartTotalArticleQuantity  {
+    text-align: center !important;
+}
+
+.fastcartconfirmationpage .PlacedOrderDetailsHeader h1 {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 20px;
+}
+
+.fastcartconfirmationpage td.CartArticleSpacer {padding: 0 0 5px; }
+
+.fastcartconfirmationpage td.CartContentsHeader {}
+
+.fastcartconfirmationpage td.CartArticleSums {font-weight: bold; }
+
+.fastcartconfirmationpage .PlacedOrderDetailsFooter, .fastcartconfirmationpage div.PlacedOrderDetailsBody, .fastcartconfirmationpage div.PlacedOrderDetailsFooter, .fastcartconfirmationpage td.CartContentsHeader {}
+
+.fastcartconfirmationpage table.CartContents,  .fastcartconfirmationpage table.PlacedOrderDetailsCartContents,  .fastcartconfirmationpage div.PlacedOrderDetailsCart,  .fastcartconfirmationpage td.OrderDetailsPDFLinkContainer,  .fastcartconfirmationpage td.CartTotalSumText
+{}
+
+.fastcartconfirmationpage td.PlacedOrderDetailsShipping {width: 150px; }
+
+.fastcartconfirmationpage td.PlacedOrderDetailsShipping div {
+    line-height: 1.5;
+}
+
+.fastcartconfirmationpage td.DiscountFeeText,
+.fastcartconfirmationpage td.ShippingFeeText,
+.fastcartconfirmationpage td.PaymentFeeText,
+.fastcartconfirmationpage td.CartTotalSumText {}
+
+.fastcartconfirmationpage td.FeePlusVatText,
+.fastcartconfirmationpage td.FeePlusVatValue {}
+
+.fastcartconfirmationpage .iteminfo-comment {}
+
+.fastcartconfirmationpage .iteminfo-comment span {}
+
+/* Loading message */
+
+.divModalUpdateContainer
+{}
+
+.divModalUpdateContainerLogin
+{}
+
+
+.divModalUpdateContainerBody
+{}
+
+
+
+/* TOOLTIP */
+#tooltip {}
+#tooltip h3, #tooltip div {}
+
+
+
+.MandatoryInformation
+{}
+
+.boxcontentleft .AlternativeDeliveryAddress {
+    background: #ddd;
+    padding: 5px 15px 5px 10px;
+    float: left;
+    border-radius: 5px;
+    margin: 0 0 10px;
+}
+
+.boxcontentleft .AlternativeDeliveryAddress + * {
+    clear: both;
+}
+
+.AlternativeDeliveryAddress .subtlebutton {
+    color: #203b85;
+    background: none;
+    font-size: 14px;
+}
+
+.AlternativeDeliveryAddress .subtlebutton:hover {
+    color: #f70;
+    text-decoration: underline;
+}
+
+
+.FastCheckoutHeaderCssClass
+{margin: 0; width: auto; }
+
+.fast-customer-info-pid-disabled
+{}
+
+.divSMSNotificationOption
+{}
+
+.sms-notification-text-div
+{}
+
+#page-without-masterpage {}
+
+#page-without-masterpage a
+{}
+
+a.fast-order-confirmation-link-to-terms
+{}
+
+/* Felmeddelande - Betalmetoder */
+
+.FastErrorSummaryPaymentErrorSubmittedAddressHeaderCssClass, .FastErrorSummaryPaymentErrorLookedUpAddressHeaderCssClass
+{}
+
+.FastErrorSummaryPaymentErrorCssClass
+{}
+
+.FastErrorSummaryPaymentErrorCssClass span
+{}
+
+.FastErrorSummaryPaymentErrorCssClass a
+{}
+
+.FastErrorSummaryPaymentErrorCssClass a:hover {}
+
+#ctl00_cart_fastcheckout_FastCustomerInfo_pCustomerWantsNewsletter {}
+
+.upFastPaymentSelect .box
+{}
+
+.arrow
+{}
+
+a:hover .arrow
+{}
+
+.byt-kundtyp
+{}
+
+/* UNSORTED */
+.FastCheckout_FastAdressConfirmationDialog-Wrapper
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper h1{}
+.FastCheckout_FastAdressConfirmationDialog-mainHeadline
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper ul
+{}
+
+
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper li
+{}
+
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper li h1
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper li table
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper li tr > td:first-child {}
+
+
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper li table tr
+{}
+
+
+.FastCheckout_FastAdressConfirmationDialog-Wrapper li table td span
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-buttonBar
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-button
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-button:hover
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-button span
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-buttonBar-vCenterer
+{}
+
+
+.FastCheckout_FastAdressConfirmationDialog-okButton
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-okButton:hover
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-cancelButton
+{}
+
+.FastCheckout_FastAdressConfirmationDialog-cancelButton:hover
+{}
+
+/* MULTIPLE SHIPPING ADDRESS */
+.fast-customer-info-leftcol span.change-multiple-address-button a {}
+
+div.div-multiple-addresses-selector-dialog .radio-button-list-table {}
+
+div.div-multiple-addresses-selector-dialog .selected-address {}
+
+
+div.div-multiple-addresses-selector-dialog .select-address-button {}
+
+div.div-multiple-addresses-selector-dialog .select-address-button:hover
+{}
+
+div.div-multiple-addresses-selector-dialog .select-address-button.address-selected {}
+
+div.div-multiple-addresses-selector-dialog .select-address-button.address-selected a {}
+
+div.div-multiple-addresses-selector-dialog div.div-hidden {}
+
+div.div-multiple-addresses-wrapper {}
+
+.hiddenSelectedAddressIndex, .hiddenFieldForUpdate {}
+
+.page-checkout #main-area label {
+    margin: 0 0 0 5px;
+    position: relative;
+    top: -1px;
+}
+
+.fastcartconfirmationpage iframe {
+    background: #fff;
+}
+
+/* HIDE LOGIN */
+#ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_panLogin,
+#ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_divMembershipRegistration {
+    /*display: none;*/
+}
+
+span#ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl01_spanPaymentIcon {
+    width: 115px;
+}
+
+/* STORE SELECTOR */
+#ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_upCommentDropDown {
+    display: none;
+}
+
+
+.pickup-in-store #ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_upCommentDropDown {
+    display: block;
+}
+
+#ctl00_Cart1_ctl00_ctl00_CartNavigation_ctl00_ctl00_LoginText {
+    display: none;
+}

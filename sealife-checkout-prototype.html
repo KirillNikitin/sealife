@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/extra.css" rel="stylesheet" type="text/css">
+    <link href="css/baseCSS.css" rel="stylesheet" type="text/css">
+    <link href="css/stylefastcheckout.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui-custom.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.7/angular-route.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/jQuery-help.js"></script>
+
+</head>
+<body ng-app="Cart">
+<div id="ctl00_main_fastcheckout_upFastCart" class="upFastCart" ng-controller="valjLand">
+
+
+
+    <!-- Kundkorg -->
+    <div id="ctl00_main_fastcheckout_FastCart_divFastCart" class="box">
+        <div id="ctl00_main_fastcheckout_FastCart_divFastCartInner" class="boxinner" style="border-color: rgb(204, 204, 204);">
+            <h1 id="ctl00_main_fastcheckout_FastCart_h1Step1Title" class="step1-title">Din Kundvagn</h1>
+            <div id="ctl00_main_fastcheckout_FastCart_divOptionsList" class="optionslist" ng-controller='itemsAndPrice'>
+
+
+                <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_upFastCartDetails" class="upFastCartDetails updatepanel">
+
+                    <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl00_divTableHeaders" class="tableheaders">
+                        <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl00_pTableHeadersArticle" class="tableheaders-article">Artikel</p>
+                        <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl00_pTableHeadersPrice" class="tableheaders-price">Pris</p>
+                        <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl00_pTableHeadersAmount" class="tableheaders-amount">Antal</p>
+                        <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl00_pTableHeadersTotal" class="tableheaders-total">Summa</p>
+                    </div>
+                    <!-- ng-repeat item in items a ng-click=increase(item)
+
+                    $rootScope += item.qty * item.price -->
+
+                    <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_basketitem" class="basketitem">
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_divProductimage" class="itemimage"><a id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_imgProductImage" title="Swims Classic" class="fancybox" href="/pub_images/original/102826-BROWN_1.jpg"><img title="Swims Classic" src="https://www.sealife.se/pub_images/thumbs/102826-BROWN_1.jpg" alt="Swims Classic"></a></div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_basketiteminfo" class="iteminfo">
+                            <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_pProductLink" class="iteminfo-name"><a id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_hlProductLink" href="/kvinna/skor/swims-classic-34">Swims Classic - M</a></p>
+                            <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_pArtNr" class="iteminfo-attributes">Artikelnummer: 102826-Brown-M</p>
+
+
+
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_divPrice" class="itemprice">
+                            <span ng-bind='item1Price'></span><span> kr/st.</span>
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_divItemInfo" class="itemamount">
+                            <a ng-click="decrease1()" name="QuantityDecrease" class="less"></a>
+                            <input type="text" ng-value="1" class="quantity" ng-model='item1Quantity'>
+                            <a ng-click="increase1()" name="QuantityIncrease" class="more"></a>
+                            <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_divQuantityDelete" class="btn-delete" style="display: none;"><input type="image" title="Ta bort från kundkorgen" class="fast-btn-delete-item" src="https://www.sealife.se/Production/images/FastCheckout/spacer.png" alt="Ta bort från kundkorgen"></div>
+
+
+                            <input type="hidden" name="ctl00$main$fastcheckout$FastCart$FastCartDetails$repCartDetails$ctl01$hdnCartItemID" id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_hdnCartItemID" value="4352">
+                        </div>
+                        <div class="itemdelete">
+                            <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_divQuantityDelete" class="btn-delete"><input type="image" onclick="javascript: if (window.confirm('Do you really want to delete this position?')) {alert('Ooops!')} else {}" id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_ibQuantityDelete" title="Ta bort från kundkorgen" class="fast-btn-delete-item" src="https://www.sealife.se/Production/images/FastCheckout/spacer.png" alt="Ta bort från kundkorgen"></div>
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_divTotalPrice" class="itemtotal">
+                            <span ng-bind='item1Total'></span><span> kr</span>
+                        </div>
+
+                    </div>
+                    <span id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_rimQuantity" style="visibility:hidden;display:none;"><span id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_rimQuantity_ntbsQuantity" style="display:none;"></span><link class="Telerik_stylesheet" type="text/css" rel="stylesheet" href="/WebResource.axd?d=eX4PCttep_MZP8b4qolO8vsCoGfK-b1cCbnSgMn04Zz1OIXMFvDck0tHc9WKZguSHm4Qy096N0cujgKSFypoEqwj44ObGtQVlFexGUir1-lTNAp9xFf03O-2Q7U8Sx3nyYRD1EoucsaqC-cOnB2WS7-9eBFE9bi4eDdrpykRIR4civdJBv_He6HivB3g18900&amp;t=635411249042612077"><link class="Telerik_stylesheet" type="text/css" rel="stylesheet" href="/WebResource.axd?d=G5lV_zmsDhxphBEfH6Iq7v5czY0eR9O_L4-o9lRruTx3q4nAOOTDBq7-sLMWHN0BeUJUy3Bk3ctWG3G3dXL3zsI_pDMy1-QxtxdwSj33Z72HsmVnPFsVGMb45A6h7aMo5ZgQ2JV29YRe5zJHaGsgSkrk7iIJqtGRe1hCjfRMxn4JbIAPik2ruEOBOgdTALgvA17GhffrqW3mZhHl-_NN2Q2&amp;t=635411249042612077"></span>
+
+                    <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_basketitem" class="basketitem even">
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_divProductimage" class="itemimage"><a id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_imgProductImage" title="Sail Racing Race Tee" class="fancybox" href="/pub_images/original/1411514-377_1_904.jpg"><img title="Sail Racing Race Tee" src="https://www.sealife.se/pub_images/thumbs/1411514-377_1_904.jpg" alt="Sail Racing Race Tee"></a></div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_basketiteminfo" class="iteminfo">
+                            <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_pProductLink" class="iteminfo-name"><a id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_hlProductLink" href="/man/sail-racing-race-tee-1">Sail Racing Race Tee - S</a></p>
+                            <p id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_pArtNr" class="iteminfo-attributes">Artikelnummer: 1411514-377-S</p>
+
+
+
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_divPrice" class="itemprice">
+                            <span ng-bind='item2Price'></span><span> kr/st.</span>
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_divItemInfo" class="itemamount">
+                            <a ng-click="decrease2()" name="QuantityDecrease" class="less"></a>
+                            <input type="text" ng-value="1" class="quantity" ng-model='item2Quantity'>
+                            <a ng-click="increase2()" name="QuantityIncrease" class="more"></a>
+                            <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_divQuantityDelete" class="btn-delete" style="display: none;"><input type="image" onclick="javascript: if (window.confirm('Do you really want to delete this position?')) {alert('Ooops!')} else {}" id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_ibQuantityDelete" title="Ta bort från kundkorgen" class="fast-btn-delete-item" src="https://www.sealife.se/Production/images/FastCheckout/spacer.png" alt="Ta bort från kundkorgen"></div>
+
+
+                            <input type="hidden" name="ctl00$main$fastcheckout$FastCart$FastCartDetails$repCartDetails$ctl02$hdnCartItemID" id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_hdnCartItemID" value="4356">
+                        </div>
+                        <div class="itemdelete">
+                            <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl01_divQuantityDelete" class="btn-delete"><input type="image" onclick="javascript: if (window.confirm('Do you really want to delete this position?')) {alert('Ooops!')} else {}" title="Ta bort från kundkorgen" class="fast-btn-delete-item" src="https://www.sealife.se/Production/images/FastCheckout/spacer.png" alt="Ta bort från kundkorgen"></div>
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_divTotalPrice" class="itemtotal">
+                            <span ng-bind='item2Total'></span><span> kr</span>
+                        </div>
+                    </div>
+                    <span id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_rimQuantity" style="visibility:hidden;display:none;"><span id="ctl00_main_fastcheckout_FastCart_FastCartDetails_repCartDetails_ctl02_rimQuantity_ntbsQuantity" style="display:none;"></span></span>
+
+                </div>
+
+
+                <div id="ctl00_main_fastcheckout_FastCart_divFastcartSumsWrapper" class="fastcart-sums-wrapper">
+                    <div id="FreeFreight_CheckoutCart" onclick="SwitchExpand(this);"></div>
+
+
+                    <!-- DELSUMMOR OCH AVGIFTER -->
+                    <div id="ctl00_main_fastcheckout_FastCart_divFastcartCampaignInput" class="fastcart-campaign-input">
+                        <label><input type="checkbox" ng-model="checked"/><span> Jag har rabattkod.</span></label>
+                        <div id="ctl00_main_fastcheckout_FastCart_FastDiscount_upFastDiscount" class="upFastDiscount" ng-show="checked">
+
+                            <div id="ctl00_main_fastcheckout_FastCart_FastDiscount_panDiscount" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_main_fastcheckout_FastCart_FastDiscount_lbDiscountCode')">
+
+                                <p id="ctl00_main_fastcheckout_FastCart_FastDiscount_campaigncodetitle" class="campaigncodetitle">
+                                    Rabattkod
+                                </p>
+                                <p style="margin-top: 5px;">
+                                    <input name="" type="text" class="WaterMark" ng-model="rabattkod">
+                                    <a class="button campaign-button" ng-click="rabatt()" ng-disabled="true"><span>OK</span></a>
+
+                                    <span ng-hide="rabattHide" style="display: block; margin-top: 5px;">{{rabattText}}</span>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- DISCOUNT MESSAGE  -->
+                        <div id="ctl00_main_fastcheckout_FastCart_upDiscountCodeMessage">
+
+                            <div id="ctl00_main_fastcheckout_FastCart_pnlDiscountCodeMessage">
+
+                                <span id="ctl00_main_fastcheckout_FastCart_lblDiscountCodeMessage"></span>
+
+                            </div>
+
+                        </div>
+                        <!-- / DISCOUNT MESSAGE -->
+                    </div>
+
+                    <div id="ctl00_main_fastcheckout_FastCart_divBasketsums" class="basketsums">
+                        <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_upFastCartSummary" class="upFastCartSummary">
+                            <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_fastCartSummaryTopDiv">
+                                <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divArticlesum" class="itemtotals">
+                                    <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divArticlesumInfo" class="largeinfo">
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pArticleSumLeft" class="aleft">
+                                            Summa artiklar:</p>
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pArticleSumRight" class="aright">
+                                            <span ng-bind="subtotal"></span><span> kr</span></p>
+                                    </div>
+                                    <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divArticleSumVATInfo" class="smallinfo">
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pArticleSumVATLeft" class="aleft">
+                                            varav moms:</p>
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pArticleSumVATRight" class="aright">
+                                            <span ng-bind="moms"></span><span> kr</span></p></p>
+                                    </div>
+                                </div>
+                                <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divPaymentCost" class="itemtotals">
+                                    <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divPaymentCostInfo" class="largeinfo">
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pPaymentCostLeft" class="aleft">
+                                            Avgift för Klarna Faktura:</p>
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pPaymentCostRight" class="aright">
+                                            29 kr</p>
+                                    </div>
+                                    <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divPaymentCostVATInfo" class="smallinfo">
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pPaymentCostVATLeft" class="aleft">
+                                            varav moms:</p>
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pPaymentCostVATRight" class="aright">
+                                            6 kr</p>
+                                    </div>
+                                </div>
+                                <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divFreightCost" class="itemtotals">
+                                    <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divFreightCostInfo" class="largeinfo">
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pFreightCostLeft" class="aleft">
+                                            Fraktavgift:</p>
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pFreightCostRight" class="aright">
+                                            0 kr</p>
+                                    </div>
+                                    <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divFreightCostVAT" class="smallinfo">
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pFreightCostVATLeft" class="aleft">
+                                            varav moms:</p>
+                                        <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pFreightCostVATRight" class="aright">
+                                            0 kr</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div style="float: none;">
+                            </div>
+
+
+                            <div id="ctl00_main_fastcheckout_FastCart_FastCartSummary_divGrandtotal" class="grandtotal fast-cart-summary" style="border-radius: 5px;">
+
+                                <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pTotalSum" class="totalsum">
+                                    Totalt inkl. moms:
+                        <span ng-bind="totalsumnumber"></span><span> kr</span></p>
+                                <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pSumToPayVAT" class="totalvat">
+                                    varav moms:
+                        <span ng-bind="totalmoms"></span><span> kr</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /DELSUMMOR OCH AVGIFTER -->
+                </div>
+            </div>
+        </div>
+        <div id="ctl00_main_fastcheckout_FastCart_divHelp" class="help" style="display: none;"><a id="step1-help" class="fancybox" href="#help1"><img src="https://www.sealife.se/Production/images/FastCheckout/helpicons/sv-SE/help-icon.png" id="ctl00_main_fastcheckout_FastCart_imgHelpIcon" alt=""></a></div>
+    </div>
+    <!-- /Kundkorg -->
+
+    <div id="ctl00_main_fastcheckout_FastCountrySelector_upFastCountrySelect" class="updatepanel upFastCountrySelect">
+        <!-- Land -->
+        <div id="ctl00_main_fastcheckout_FastCountrySelector_divFastCountrySelector" class="box">
+            <div id="ctl00_main_fastcheckout_FastCountrySelector_divFastCountrySelectorInner" class="boxinner" style="border-color: rgb(204, 204, 204);">
+                <h1 id="ctl00_main_fastcheckout_FastCountrySelector_h1Step3Title" class="step3-title">Välj land</h1>
+                <form id="divFastCountrySelectorOptionsList" class="optionslist">
+                    <label class="land-select">
+                        <input type="radio" ng-model="land" value="Sverige" class="land-select" ng-change="selectLand(); tab = 'Sv'"/>
+                        <span class="title">Sverige</span>
+                        <span class="flagicon flag-se"></span><br>
+                    </label>
+                    <label class="land-select">
+                        <input type="radio" ng-model="land" value="Danmark" class="land-select" ng-change="selectLand(); tab = 'Dk'"/>
+                        <span class="title">Danmark</span>
+                        <span class="flagicon flag-dk"></span><br>
+                    </label>
+                </form>
+            </div>
+            <div id="ctl00_main_fastcheckout_FastCountrySelector_divHelp" class="help" style="display: none;"><a id="step2-help" class="fancybox" href="#help2"><img src="https://www.sealife.se/Production/images/FastCheckout/helpicons/sv-SE/help-icon.png" id="ctl00_main_fastcheckout_FastCountrySelector_imgHelpIcon" alt=""></a></div>
+        </div>
+        <!-- /Land -->
+    </div>
+
+    <div id="ctl00_main_fastcheckout_FastPaymentSelector_upFastPaymentSelect" class="updatepanel upFastPaymentSelect">
+        <!-- Contains witch list selected payment belongs to 0 is list that is visible, 1 is list for optional payments-->
+        <input type="hidden" name="ctl00$main$fastcheckout$FastPaymentSelector$hfSelectedPaymentInList" id="ctl00_main_fastcheckout_FastPaymentSelector_hfSelectedPaymentInList" value="0">
+        <!-- Betalning -->
+        <div id="ctl00_main_fastcheckout_FastPaymentSelector_divFastPaymentSelector" class="box">
+            <div id="ctl00_main_fastcheckout_FastPaymentSelector_divFastPaymentSelectorInner" class="boxinner" style="border-color: rgb(204, 204, 204);">
+                <div style="clear:both; height: 35px;">
+                    <h1 id="ctl00_main_fastcheckout_FastPaymentSelector_h1Step4Title" class="step4-title">
+                        Välj betalningsmetod</h1>
+
+                </div>
+
+                <div id="ctl00_main_fastcheckout_FastPaymentSelector_divFastPaymentSelectorOptionsList_SV" ng-show="tab === 'Sv'" class="optionslist">
+
+
+                   <label class="pay-type-method"><input type="radio" ng-model="payMethodSweden" value="payMethodSweden1" name="payMethodSweden"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl00_spanPaymentIcon" class="paymenticon payment-13 payment-13-SE"></span><br>
+                        <span class="pay-desc" title="Klarna Faktura - 14 dagar">Klarna Faktura - 14 dagar</span>
+                   </label>
+                   <label class="pay-type-method"><input type="radio" ng-model="payMethodSweden" value="payMethodSweden2" name="payMethodSweden"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl01_spanPaymentIcon" class="paymenticon payment-4 payment-4-SE"></span><br>
+                        <span class="pay-desc" title="Kortbetalning">Kortbetalning</span>
+                   </label>
+                   <label class="pay-type-method"><input type="radio" ng-model="payMethodSweden" value="payMethodSweden3" name="payMethodSweden"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl02_spanPaymentIcon" class="paymenticon payment-14 payment-14-SE"></span><br>
+                        <span class="pay-desc" title="Klarna Konto">Klarna Konto</span>
+                   </label>
+                    <div class="methods-desc">
+                        <div class="payment-options">
+                            <div class="payment-options-inner">
+                                <div ng-show="payMethodSweden == 'payMethodSweden1'">
+                                    <span class="spanPaymentTypePaymentMessageValue">
+                                        <!--KLARNA AGREEMENT START-->
+                                            Betala 14 dagar i efterskott.<br>
+                                            <a target="_blank" href="https://cdn.klarna.com/1.0/shared/content/legal/terms/10270/sv_se/invoice/0">Villkor för Klarna Faktura</a>
+                                        <!--KLARNA AGREEMENT END-->
+                                    </span>
+                                </div>
+                                <div ng-show="payMethodSweden == 'payMethodSweden2'">
+                                    <div class="paymentInfoPaymentSelectCardEdit">
+                                        <span class="FastPaymentSelectLabelCard">Korttyp:</span>
+                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" /><span>VISA</span></label>
+                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" /><span>MasterCard</span></label>
+                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" /><span>Diners</span></label>
+                                    </div>
+                                </div>
+                                <div ng-show="payMethodSweden == 'payMethodSweden3'">
+                                    <div class="paymentInfoPaymentSelectHirePurchaseEdit">
+                                        <div class="hire-purchase-list">
+                                            <span class="FastPaymentSelectLabelHirePurchase">Välj alternativ:</span>
+
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>Handla nu - Betala i slutet av januari</span><span class="payTimePrice">16.214 kr</span><img title="Minsta kostnad är 1 kr" src="i/help.png">
+                                            </label>
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>3 mån</span><span class="payTimePrice">5.456 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            </label>
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>6 mån</span><span class="payTimePrice">2.759 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            </label>
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>12 mån</span><span class="payTimePrice">1.402 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            </label>
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>24 mån</span><span class="payTimePrice">791 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            </label>
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>Konto</span><span class="payTimePrice">849 kr</span><img title="Minsta kostnad är 1 kr" src="i/help.png">
+                                            </label>
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>36 mån</span><span class="payTimePrice">560 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+
+                </div>
+                <div id="ctl00_main_fastcheckout_FastPaymentSelector_divFastPaymentSelectorOptionsList_DK" ng-show="tab === 'Dk'" class="optionslist">
+
+                    <label class="pay-type-method selected"><input type="radio" ng-model="payMethodDenmark" name="payMethodDenmark" checked="checked"><span class="paymenticon payment-4"></span><br>
+                        <span class="pay-desc" title="Kortbetalning">Kortbetalning</span>
+                    </label>
+                    <div class="methods-desc">
+                        <div class="payment-options">
+                            <div class="payment-options-inner">
+                                <div>
+                                    <div class="paymentInfoPaymentSelectCardEdit">
+                                        <span class="FastPaymentSelectLabelCard">Korttyp:</span>
+                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" /><span>VISA</span></label>
+                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" /><span>MasterCard</span></label>
+                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" /><span>Diners</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="clear:both;"></div>
+
+                </div>
+
+            </div>
+            <div id="ctl00_main_fastcheckout_FastPaymentSelector_divHelp" class="help" style="display: none;">
+                <a id="step3-help" class="fancybox" href="#help3">
+                    <img src="https://www.sealife.se/Production/images/FastCheckout/helpicons/sv-SE/help-icon.png" id="ctl00_main_fastcheckout_FastPaymentSelector_imgHelpIcon" alt=""></a></div>
+        </div>
+        <!-- /Betalning -->
+    </div>
+
+    <div id="ctl00_main_fastcheckout_FastFreightSelector_upFastFreightSelector" class="updatepanel upFastFreightSelector">
+        <div id="ctl00_main_fastcheckout_FastFreightSelector_divFastFreightSelector" class="box">
+            <div id="ctl00_main_fastcheckout_FastFreightSelector_divFastFreightSelectorInner" class="boxinner" style="border-color: rgb(204, 204, 204);">
+                <h1 id="ctl00_main_fastcheckout_FastFreightSelector_h1Step5Title" class="step5-title">Välj fraktmetod</h1>
+                <div id="ctl00_main_fastcheckout_FastFreightSelector_divFastFreightSelectorOptionsList" class="optionslist">
+
+                    <label class="fraktmetod-select selected">
+                        <input type="radio" class="fraktmetod-select" ng-model="DaysDeliveryTime" name="DaysDeliveryTime" checked="checked" />
+                        <span class="freight-name" title="">Paket 2-5 dagar</span>
+                        <span class="freight-cost" style="border-radius: 5px;">0 kr</span>
+                    </label>
+
+                </div>
+                <div id="ctl00_main_fastcheckout_FastFreightSelector_divFreightOptionsBoxtop" class="freight-options-boxtop"></div>
+            </div>
+            <div id="ctl00_main_fastcheckout_FastFreightSelector_divHelp" class="help" style="display: none;"><a id="step4-help" class="fancybox" href="#help4"><img src="https://www.sealife.se/Production/images/FastCheckout/helpicons/sv-SE/help-icon.png" id="ctl00_main_fastcheckout_FastFreightSelector_imgHelpIcon" alt=""></a></div>
+        </div>
+    </div>
+
+
+    <!-- Personuppgifter -->
+    <div id="ctl00_main_fastcheckout_FastCustomerInfo_divFastCustomerInfo" class="box" ng-controller="customerInfo">
+        <div id="ctl00_main_fastcheckout_FastCustomerInfo_divFastCustomerInfoInner" class="boxinner" style="border-color: rgb(204, 204, 204);">
+            <!-- RUBRIK INKL. BYT KUNDTYP -->
+            <div id="ctl00_main_fastcheckout_FastCustomerInfo_upCustomerInfoTitle" class="upCustomerInfoTitle updatepanel">
+
+                <h1 id="ctl00_main_fastcheckout_FastCustomerInfo_h1Step6Title" class="step6-title" ng-click="fuh()">
+                    Kunduppgifter
+                    (<span id="step6-kundtyp">PRIVATPERSON</span>)</h1>
+                <a id="ctl00_main_fastcheckout_FastCustomerInfo_lbChangeCustomerType" class="byt-kundtyp subtlebutton" href="javascript:__doPostBack('ctl00$main$fastcheckout$FastCustomerInfo$lbChangeCustomerType','')" style="border-radius: 5px;">Byt till företagskund</a>
+
+            </div>
+            <!-- /RUBRIK INKL. BYT KUNDTYP -->
+            <div id="ctl00_main_fastcheckout_FastCustomerInfo_divFastCustomerInfoOptionsList" class="optionslist">
+                <!-- FELMEDDELANDE - STEG 6 -->
+                <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastErrorSummary_upFastErrorSummary" class="upFastErrorSummary">
+
+                </div>
+
+                <!-- /FELMEDDELANDE - STEG 6 -->
+                <div id="ctl00_main_fastcheckout_FastCustomerInfo_divFastCustomerInfoLeftcol" class="fast-customer-info-leftcol">
+                    <div id="ctl00_main_fastcheckout_FastCustomerInfo_upGetCustomerInfo">
+                        <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastGetCustomerInfo_divAddressesRetrieval" class="getinfo get-decidas-info" style="border-radius: 5px;">
+                            <p>Hämta personuppgifter automatiskt:</p>
+                            <input name="ctl00$main$fastcheckout$FastCustomerInfo$FastGetCustomerInfo$tbAddressesRetrieval" type="text" id="ctl00_main_fastcheckout_FastCustomerInfo_FastGetCustomerInfo_tbAddressesRetrieval" tabindex="1" class="WaterMark hamta-personnummer idleField" onkeydown="if(event.which || event.keyCode){ if ((event.which == 13) || (event.keyCode == 13)) {location.href=$(&quot;[id$='lbAddressesRetrieval']&quot;).attr('href'); return false;} }">
+                            <input type="hidden" name="ctl00$main$fastcheckout$FastCustomerInfo$FastGetCustomerInfo$tbwAddressesRetrieval_ClientState" id="ctl00_main_fastcheckout_FastCustomerInfo_FastGetCustomerInfo_tbwAddressesRetrieval_ClientState">
+
+
+                            <a class="button get-customer-info-btn" onclick="javascript: window.alert('Oops!')"><span>Hämta</span></a>
+                        </div>
+
+                    </div>
+                    <!-- /HÄMTA UPPGIFTER -->
+                    <!-- Vänster kolumn -->
+                    <div id="ctl00_main_fastcheckout_FastCustomerInfo_upCustomerInfoLeftPart" class="updatepanel upCustomerInfoLeftPart">
+                        <div id="ctl00_main_fastcheckout_FastCustomerInfo_divFastCustomerInfoContentLeft" class="boxcontentleft">
+                            <div class="formrow">
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pPid" class="fleft">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblPidLabel" class="label">
+                                        Personnummer<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnPidRequired" class="required">*</span></span><input name="ctl00$main$fastcheckout$FastCustomerInfo$tbPid" type="text" id="ctl00_main_fastcheckout_FastCustomerInfo_tbPid" disabled="disabled" tabindex="10" title="Fältet är ej redigerbart. Mata in personnummer i fältet ovan." class="aspNetDisabled idleField" onkeydown="if(event.which || event.keyCode){ if ((event.which == 13) || (event.keyCode == 13)) { return false; } }">&nbsp;&nbsp;
+                                </p>
+
+                            </div>
+                            <div class="formrow">
+
+
+
+                            </div>
+                            <div class="formrow">
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pFirstName" class="fleft">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblFirstNameLabel" class="label">
+                                        Förnamn<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnFirstNameRequired" class="required">*</span></span>
+                                    <input type="text"  tabindex="50" ng-model="customerName" class="idleField">&nbsp;
+                                </p>
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pLastName" class="fright">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblLastNameLabel" class="label">
+                                        Efternamn<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnLastNameRequired" class="required">*</span></span>
+                                    <input type="text" tabindex="60" ng-model="customerSureName" class="idleField">&nbsp;</p>
+                            </div>
+                            <div class="formrow">
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pStreet" class="fleft">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblStreetLabel" class="label">
+                                        Adress<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnStreetRequired" class="required">*</span></span>
+                                    <input type="text" tabindex="70" class="aspNetDisabled fast-customer-info-pid-disabled idleField" ng-model="customerAddress">&nbsp;
+                                </p>
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pToggleExtraAddress" class="fright extraadresstoggle">
+                                    <a class="subtlebutton" style="border-radius: 5px;" ng-click="subtlebutton()">Visa extra adressrad</a>
+                                </p>
+                            </div>
+                            <p id="ctl00_main_fastcheckout_FastCustomerInfo_pCOAddress" class="long fastCustomerInfoCOAddress" ng-show="subAddress">
+                                <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblCOAddressLabel" class="label">
+                                    Extra adress</span><input ng-model="extraAddress" type="text" tabindex="80" class="idleField">&nbsp;
+                            </p>
+                            <div class="formrow">
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pPostalCode" class="fleft">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblPostalCodeLabel" class="label">
+                                        Postnummer<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnPostalCodeRequired" class="required">*</span></span>
+                                    <input type="text" tabindex="90" class="aspNetDisabled fast-customer-info-pid-disabled idleField" ng-model="postCode">&nbsp;&nbsp;
+                                </p>
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pCity" class="fright">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblCityLabel" class="label">
+                                        Ort<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnCityRequired" class="required">*</span></span>
+                                    <input type="text" tabindex="100" class="aspNetDisabled fast-customer-info-pid-disabled idleField" ng-model="ort">&nbsp;
+                                </p>
+                            </div>
+                            <div class="formrow">
+
+
+                            </div>
+                            <p id="ctl00_main_fastcheckout_FastCustomerInfo_pCountryFlag" class="long adress-land">
+                                <span id="ctl00_main_fastcheckout_FastCustomerInfo_divCountryFlag" class="flagicon flag-se"></span><span id="ctl00_main_fastcheckout_FastCustomerInfo_lblCountryNameLabel" class="adress-landnamn">
+                                    Sverige</span>
+                            </p>
+                            <p id="ctl00_main_fastcheckout_FastCustomerInfo_pEmail" class="long">
+                                <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblEmailLabel" class="label">E-postadress<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnEmailRequired" class="required">*</span></span>
+                                <input type="text" tabindex="130" class="idleField" ng-model="email">
+                                &nbsp;
+                                &nbsp;</p>
+
+                            <p id="ctl00_main_fastcheckout_FastCustomerInfo_pEmailValidate" style="display:inherit;" class="long">
+                                <span style="display:inherit;" class="label">Bekräfta E-postadress<span id="ctl00_main_fastcheckout_FastCustomerInfo_spnEmailValidateRequired" class="required">*</span></span>
+                                <input type="text" tabindex="135" style="display:inherit;" class="idleField" ng-model="emailConfirmation">
+                                &nbsp;
+
+
+
+                            </p>
+
+                            <div class="formrow">
+                                <div id="ctl00_main_fastcheckout_FastCustomerInfo_upSmsNotification">
+
+                                    <div id="ctl00_main_fastcheckout_FastCustomerInfo_pMobile" class="long-opt">
+                                        <div class="fleft">
+                                                <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblMobileLabel" class="label">
+                                                    Mobilnummer
+                                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_spnMobileRequired" class="required">*</span> </span>
+                                            <input type="text" ng-model="mobilenumber" tabindex="140" class="idleField" />
+
+                                            &nbsp;
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="formrow">
+
+
+                            </div>
+                            <p id="ctl00_main_fastcheckout_FastCustomerInfo_pCustomerWantsNewsletter" class="long-opt">
+                                <input id="ctl00_main_fastcheckout_FastCustomerInfo_cbCustomerWantsNewsletter" type="checkbox" name="ctl00$main$fastcheckout$FastCustomerInfo$cbCustomerWantsNewsletter" checked="checked" tabindex="180"><label for="ctl00_main_fastcheckout_FastCustomerInfo_cbCustomerWantsNewsletter">Jag vill ha nyheter och erbjudanden från Sea Life</label>
+                            </p>
+                            <!-- Alternativ Leveransadress -->
+                            <p id="ctl00_main_fastcheckout_FastCustomerInfo_pToggleAlternativeDeliveryAddress" class="AlternativeDeliveryAddress">
+
+
+                            </p>
+
+                            <div id="ctl00_main_fastcheckout_FastCustomerInfo_pnlAlternativeDeliveryAddress" class="invisible">
+
+                                <h2 id="altdeliverytitle">
+                                    ALTERNATIV LEVERANSADRESS
+                                </h2>
+
+                                <div class="formrow">
+
+
+
+                                </div>
+                                <div class="formrow">
+
+
+                                </div>
+                                <div class="formrow">
+
+                                    <p id="ctl00_main_fastcheckout_FastCustomerInfo_AlternativeToggleCOAddress" class="fright extraadresstoggle">
+                                        <a id="ctl00_main_fastcheckout_FastCustomerInfo_lbAlternativeToggleCOAddress" class="subtlebutton" href="javascript:__doPostBack('ctl00$main$fastcheckout$FastCustomerInfo$lbAlternativeToggleCOAddress','')" style="border-radius: 5px;">Visa extra adressrad</a></p>
+                                </div>
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pAlternativeCOAddress" class="fleft invisible fastCustomerInfoAlternativeCOAddress">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblAlternativeCOAddressLabel" class="label">
+                                        Extra adress
+                                        </span><input name="ctl00$main$fastcheckout$FastCustomerInfo$tbAlternativeCOAddress" type="text" id="ctl00_main_fastcheckout_FastCustomerInfo_tbAlternativeCOAddress" tabindex="260" onkeydown="if(event.which || event.keyCode){ if ((event.which == 13) || (event.keyCode == 13)) { return false; } }" class="idleField">
+                                    &nbsp;
+                                </p>
+                                <div class="formrow">
+
+
+                                </div>
+                                <div class="formrow">
+
+
+                                </div>
+                                <p id="ctl00_main_fastcheckout_FastCustomerInfo_pAlternateCountryFlag" class="long adress-land">
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_divAlternateCountryFlag" class="flagicon flag-se"></span><span id="ctl00_main_fastcheckout_FastCustomerInfo_lblAlternativeCountryNameLabel" class="adress-landnamn">
+                                        Sverige</span>
+                                </p>
+
+                            </div>
+                            <!-- /Alternativ Leveransadress -->
+                            <p id="ctl00_main_fastcheckout_FastCustomerInfo_pMandatoryInformation" class="MandatoryInformation">
+                                <span id="ctl00_main_fastcheckout_FastCustomerInfo_lblMandatoryInformationDescription" class="required">*</span><span>= Obligatorisk information</span>
+                            </p>
+                        </div>
+
+
+                        <script type="text/javascript" src="/SystemScripts/MultipleAddressesSelector.js"></script>
+                        <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastMultipleAddressesSelector_upMultipleAddressesSelector">
+
+                            <div id="divMultipleAddressesSelectorDialogHider" style="display: none;">
+                                <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastMultipleAddressesSelector_divMultipleAddressesSelectorDialog" class="div-multiple-addresses-selector-dialog">
+                                    Vi har uppmärksammat att ditt företag har flera leveransadresser. Vänligen välj en av följande.
+                                    <div class="div-multiple-addresses-wrapper">
+
+                                    </div>
+                                    <br>
+                                    <div class="select-address-button">
+                                        <div class="div-1">
+                                            Ingen adress vald
+                                        </div>
+                                        <div class="div-2 div-hidden">
+                                            <div onclick="onSelectAddressButtonClicked(); $.fancybox.close();">
+                                                Välj adress
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input name="ctl00$main$fastcheckout$FastCustomerInfo$FastMultipleAddressesSelector$hiddenSelectedAddressIndexField" type="text" id="ctl00_main_fastcheckout_FastCustomerInfo_FastMultipleAddressesSelector_hiddenSelectedAddressIndexField" class="hiddenSelectedAddressIndex idleField">
+                                    <input type="submit" name="ctl00$main$fastcheckout$FastCustomerInfo$FastMultipleAddressesSelector$hiddenFieldForUpdate" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$main$fastcheckout$FastCustomerInfo$FastMultipleAddressesSelector$hiddenFieldForUpdate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_main_fastcheckout_FastCustomerInfo_FastMultipleAddressesSelector_hiddenFieldForUpdate" class="hiddenFieldForUpdate">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="ctl00_main_fastcheckout_FastCustomerInfo_fancyBoxUpdateHandler">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /Vänster kolumn -->
+                <div id="ctl00_main_fastcheckout_FastCustomerInfo_upFastCartComment" class="upFastCartComment
+updatepanel">
+
+
+                    <!-- FAST CART COMMENT -->
+                    <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_divBoxContentRight" class="boxcontentright">
+                        <!-- LOGGA IN -->
+                        <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_panLogin">
+
+                            <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_divLogin" class="loggain" style="border-radius: 5px;">
+                                <span id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_lblDescriptionLogin">Logga in för att hämta sparade uppgifter</span>
+                                <a class="button fancybox-iframe-login login-text" id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_LoginButton" href="https://www.sealife.se/FastLogin.aspx?q=aHR0cHM6Ly93d3cuc2VhbGlmZS5zZS9jaGVja291dA=="><span>Logga in</span></a>
+                            </div>
+
+                        </div>
+
+                        <!-- /LOGGA IN -->
+                        <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_divMembershipRegistration">
+                            <p>
+                                <input id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_cbMembershipRegistration" type="checkbox" name="ctl00$main$fastcheckout$FastCustomerInfo$FastCartComment$cbMembershipRegistration" onclick="javascript:setTimeout('__doPostBack(\'ctl00$main$fastcheckout$FastCustomerInfo$FastCartComment$cbMembershipRegistration\',\'\')', 0)" tabindex="310"><label for="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_cbMembershipRegistration">Spara mina uppgifter</label>
+
+                            </p>
+                            <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_upPassword">
+                                <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_pnlPasswords" class="invisible">
+
+                                    <span id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_lblPassword1" class="label">Önskat lösenord<span id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_lblPassword1Required" class="required">*</span></span><input name="ctl00$main$fastcheckout$FastCustomerInfo$FastCartComment$tbPassword1" type="password" id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_tbPassword1" tabindex="320" class="passwordbox idleField"><br><span id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_lblPassword2" class="label">Önskat lösenord igen<span id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_lblPassword2Required" class="required">*</span></span><input name="ctl00$main$fastcheckout$FastCustomerInfo$FastCartComment$tbPassword2" type="password" id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_tbPassword2" tabindex="330" class="passwordbox idleField"><br>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastCustomerInfo_FastCartComment_upCommentDropDown">
+
+
+                        </div></div><!-- /FAST CART COMMENT -->
+
+
+                </div>
+            </div>
+        </div>
+        <div id="ctl00_main_fastcheckout_FastCustomerInfo_divHelp" class="help" style="display: none;">
+            <a id="step6-help" class="fancybox" href="#help5">
+                <img src="https://www.sealife.se/Production/images/FastCheckout/helpicons/sv-SE/help-icon.png" id="ctl00_main_fastcheckout_FastCustomerInfo_imgHelpIcon" alt=""></a></div>
+    </div>
+    <!--
+    /Personuppgifter -->
+
+    <div id="ctl00_main_fastcheckout_FastOrderConfirmation_upFastOrderConfirmation" class="updatepanel upFastOrderConfirmation" ng-controller="bill">
+        <div id="ctl00_main_fastcheckout_FastOrderConfirmation_divFastOrderConfirmation" class="step7">
+            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_divFastOrderConfirmationApprove" class="approve">
+                <input id="ctl00_main_fastcheckout_FastOrderConfirmation_cbIsTermsConfirmed" type="checkbox" name="ctl00$main$fastcheckout$FastOrderConfirmation$cbIsTermsConfirmed" tabindex="390"><label for="ctl00_main_fastcheckout_FastOrderConfirmation_cbIsTermsConfirmed">Jag godkänner Sea Life:s <a class="fancybox-iframe-terms fast-order-confirmation-link-to-terms" href="#terms-and-conditions">Köpinformation</a></label>
+                <div style="display:none; width:800px; max-width:800px;" id="terms-and-conditions"><h3>FRI FRAKT</h3>
+                    <p>Vi levererar alltid fraktfritt till alla adresser inom Sverige och Danmark.</p>
+                    <h3>FRI RETUR I BUTIK</h3>
+                    <p><em>Det går utmärkt att byta eller returnera varor köpta på sealife.se i någon av våra fysiska butiker. Visa bara upp ditt kvitto från sealife.se i kassan.</em></p>
+                    <h3>RETURER OCH BYTEN VIA POST</h3>
+                    <p><em>Returer skickas med fördel med postens företagspaket till:</em></p>
+                    <p><em>Sea Life Att: Online Store Siroccogatan 1 131 54 Nacka</em></p>
+                    <p><em>Vid retur måste du packa varan i påse eller kartong och varan ska returneras till oss i bra skick. Även skokartonger måste returneras i papper eller extra kartong för att inga adresslappar ska klistras på skokartongen. Som kund står du själv för returfrakten.</em></p>
+                    <hr>
+                    <p><em></em>&nbsp;</p>
+                    <h3>KÖPVILLKOR</h3>
+                    <p>Här nedan finner du utförligare information och våra kompletta köpvillkor.</p>
+                    <p>Sea Life ingår endast avtal med myndig (18 år) person, är man minderårig krävs målsmans tillstånd.</p>
+                    <p><strong><span style="text-decoration: underline;">Priser</span>: </strong>Alla priser inkluderar mervärdeskatt med 25 %. Vi reserverar oss för eventuella prisfel som kan uppstå.</p>
+                    <p><span style="text-decoration: underline;"><strong>Leverans</strong></span><strong>: </strong>Du får dina varor inom 2-5 arbetsdagar efter det att vi fått din beställning. Sea Life skickar alla sina paket med Posten Sverige AB. Kvittot ligger i kuvertet med bifogad folder. Vi skickar bara till adresser inom Sverige och Danmark. Vi reserverar oss för slutförsäljning.</p>
+                    <p><strong><span style="text-decoration: underline;">Betalsätt</span>:</strong> Du väljer själv hur du vill betala dina varor. I slutet på nästa månad med Faktura eller Konto eller med Kort. Använd det betalsätt som passar dig bäst.</p>
+                    <p><strong><span style="text-decoration: underline;">Kortbetalning</span>:</strong>Du kan betala med Visa, Master Card/Eurocard, American Express eller Diners Club. Din onlinebetalning är säkrad genom att Sea Life använder betalningstjänster från DIBS(&gt;&gt;www.dibs.se) samt banken.</p>
+                    <p>DIBS system är godkända av alla svenska banker samt certifierade enligt PCI DSS av VISA och Master Card för att förmedla betaltransaktioner i högsta säkerhetsklass. All kommunikation mellan butiken och din bank sköts av DIBS och krypteras via SSL(secure Sockets Layer). Att betalningen sker på en säker sida kan du se genom att adressen på betalsidan börjar med <a href="https://"><span style="text-decoration: underline;"><span style="color: #0000ff;">https://</span></span></a> samt att det visas ett hänglås i nedre högra hörnet av din browser. Sea Life har därmed aldrig tillgång till kortinformationen och kan därför inte registrera eller lagra dina kortuppgifter.DIBS stödjer också 3D Secure för att identifiera kortinnehavaren vid köp på internet och därigenom minska risken för missbruk av kortuppgifter. Är ditt kort anslutet till 3D Secure kommer du att kopplas över till din bank för verifiering innan betalningen godkänns.</p>
+                    <p><strong><span style="text-decoration: underline;">Månadsfaktura</span>: </strong>Alla våra fakturor hanteras och skickas ut av företaget Klarna.Kundtjänst Klarna 08-120 120 10. Du måste ha fyllt 18 år för att få handla med Månadsfaktura.När du betalar via Klarna faktura handlar du tryggt och enkelt. Du behöver aldrig uppge dina kortuppgifter, och betalar alltid efter att du fått hem dina varor. Vid betalning mot faktura tillkommer en faktureringsavgift på 29 kr på alla fakturabeställningar.</p>
+                    <p>• Få alltid hem varan innan du betalar • Betalningstid - alltid 14 dagar • Du behöver aldrig lämna ut kortuppgifter • Alltid 14 dagars ångerrätt i enlighet med distans- och hemförsäljningslagen. • Ladda ner dina fakturor från klarna.se • Möjlighet till delbetalning.Vi bjuder på fakturaavgiften. Om betalningen uteblir tillkommer en påminnelseavgift om 50 SEK samt dröjsmålsränta om 25.5 %. Vid köptillfället görs en kreditprövning som i vissa fall innebär att en kreditupplysning tas. Då kommer du få en kopia på kreditupplysningen per post.Personuppgifter hanteras i enlighet med gällande lagstiftning. Klarna behandlar personuppgifter i syfte att utföra kundanalys, identifikation, kreditkontroll och Marknadsföring. Personnummer används som kundnummer i kundhanteringssyfte.</p>
+                    <p><strong><span style="text-decoration: underline;">Konto</span>: </strong>Konto innebär helt enkelt att du delar upp betalningen. Detta hanteras helt av företaget Klarna. Kundtjänst Klarna 08-120 120 10. Betalsättet för dig som själv vill välja hur mycket du betalar varje månad. Men Klarna konto är mer än så. Förutom att du alltid får hem dina varor innan du betalar,samlar du alla dina köp på ett konto. Detta gäller även om du har handlat i flera olika butiker via Klarna. Det betyder en enda faktura, oavsett antalet köp.</p>
+                    <p>• Få alltid hem varan innan du betalar • Betala från 50 SEK/mån eller 1/24 av totalbeloppet • Du behöver aldrig lämna ut kortuppgifter • Alla dina köp samlas på ett konto och på en faktura • Handla nu – betala i slutet av nästkommande månad • En aviavgift om 29 SEK, oavsett antalet köp • Du kan när som helst betala hela beloppet på en gångEx: Vid ett köp om 10 000 SEK med Klarna Konto basvillkor är uppläggningsavgiften 0 SEK. Den gällande årsräntan är 19,9 % vilket motsvarar en effektiv ränta om 29,22 %. Kreditköpspriset är 11 458 SEK. Antalet delbetalningar är 12 stycken och varje delbelopp är 955 SEK. Exemplet förutsätter att avbetalning sker under ett års tid.Vid köptillfället görs en kreditprövning som i vissa fall innebär att en kreditupplysning tas. Du kommer då få en kopia på kreditupplysningen per post.</p>
+                    <p><strong><span style="text-decoration: underline;">Retur/byten</span>: </strong>Du har full ångerrätt (retur och bytesrätt) inom 14 dagar från att du mottagit varan. Vid retur måste du packa varan i påse eller kartong och varan ska vara i bra skick, varan får självklart provas men ska inte se använd ut vid retur. Även skokartonger måste returneras i papper eller extra kartong för att inga adresslappar ska klistras på skokartongen. Vid retur av vara som hanterats i större omfattning än vad som varit nödvändigt för att fastställa varans egenskaper och funktion, ersätter konsumenten oss för den eventuella värdeminskning som uppstått. Värdeminskningens omfång bestäms av Sealife.</p>
+                    <p>Skicka ett mail till oss på "kontakta oss" med ärende, ditt referensnummer och kontaktuppgifter innan du skickar varan.</p>
+                    <p>Där kan du också berätta om du vill byta till annan färg eller storlek. Returfrakten står kunden för.</p>
+                    <p><a href="/pub_docs/files/Angerblankett_Konsumentverket_140613.pdf">Ladda ner ångerblankett&nbsp;här.</a></p>
+                    <p><strong>Returadress:</strong></p>
+                    <p>Sea Life Att: Online Store Siroccogatan 1 131 34 Nacka</p>
+                    <p><strong><span style="text-decoration: underline;">Reklamation</span>: </strong>Som konsument har du enligt lag rätt att reklamera en vara i upp till tre år från köpedatumet. Det ska dock ske inom skälig tid (inom två månader) från att ett fel upptäckts. Du måste kunna uppvisa någon form av köpebevis när det gäller retur, byte eller reklamation. Vi vill gärna att ni kontaktar oss före reklamation för en smidigare hantering av ärendet. Om det rör sig om en reklamation på grund av skadad vara eller att vi expedierat fel vara, återbetalar vi dig för returfrakten samtidigt som vi återbetalar det du lagt ut för varan. Varor som återsändes mot postförskott eller efterkrav utlöses ej av oss. Vid eventuell tvist följer vi Allmänna Reklamationsnämndens beslut.</p>
+                    <p><strong><span style="text-decoration: underline;">Återbetalning</span>:</strong>Återbetalning sker inom 14 arbetsdagar från det att vi mottagit och godkänt din retur. Vi kan endast utföra återbetalning på samma sätt och till samma konto som användes vid köptillfället.</p>
+                    <p><strong><span style="text-decoration: underline;">Säkerhet</span>: </strong>I samband med din registrering och beställning godkänner du enligt lag att vi lagrar och använder dina uppgifter i vår verksamhet för att fullfölja våra åtagande gentemot dig. Sea Life skyddar dina personuppgifter enligt personuppgiftslagen. Du har alltid rätt att se dina personuppgifter som finns registrerade hos oss. Om de är felaktiga eller ofullständiga har du rätt att få uppgifterna rättade eller raderade.</p>
+                    <p><strong><span style="text-decoration: underline;">Ej uthämtade paket</span>: </strong>För paket som ej hämtas ut debiteras en avgift på 249 SEK. Det motsvarar de kostnader som det orsakat oss att skicka ut paketet samt mottagit det i retur.</p>
+                    <p><strong><span style="text-decoration: underline;">Övrigt</span>: </strong>Alla varor förblir Sea Lifes egendom till dess att full betalning kommit bolaget tillhanda. Alla försök till bedrägerier polisanmäls.</p>
+                    <p><strong><span style="text-decoration: underline;">Cookies</span></strong>:&nbsp;&nbsp;Enligt lagen om elektronisk kommunikation, som trädde i kraft den 25 juli 2003, ska alla som besöker en webbplats meddelas om cookies används. När du besöker denna webbplats sparas cookies på din dator. Dessa cookies är s.k. sessionscookies och används för att hålla reda på din inloggning (om du är inloggad) och din kundkorg när du handlar. Sessionscookies lagras inte under en längre tid på din dator, utan försvinner när du stänger din webbläsare. Om du inte accepterar användning av cookies kan du ställa in din webbläsare så att den automatiskt nekar cookies eller så att den informerar dig om en webbsida använder cookies. Om du stänger av cookies kommer du inte att kunna handla, eftersom kundkorgen och inloggningen kräver cookies för att fungera. Du kan däremot titta runt i butiken utan att ha cookies aktiverat.</p>
+                    <p><strong><span style="text-decoration: underline;">Sortiment</span>: </strong>Sea Life reserverar sig för förändringar i sortimentet och har rätt att ta bort varor ur sortimentet innan ett köp har gått igenom. Vi reserverar oss för eventuell slutförsäljning av varor i sortimentet. <br>Sea Life reserverar sig för eventuella tryckfel i texter på hemsidan och ger heller ingen garanti att alla bilder exakt återger produkternas verkliga utseende. Sea Life förbehåller sig rätten att justera priser och eventuella pris fel.</p>
+                    <p><strong><span style="text-decoration: underline;">Frågor</span>: </strong>Har du frågor är du välkommen att kontakta oss via e-post <a href="mailto:kundservice@sealife.se"><span style="text-decoration: underline;"><span style="color: #0000ff;">kundservice@sealife.se</span></span></a></p></div>
+                <span id="ctl00_main_fastcheckout_FastOrderConfirmation_spnTermsConfirmedRequired" class="required">*</span>
+
+                <br>
+
+
+
+            </div>
+            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_divFastOrderConfirmationSummary" class="verybottom">
+                <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_upFastCartSummary" class="upFastCartSummary">
+
+                    <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_fastCartSummaryTopDiv">
+                        <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divArticlesum" class="itemtotals">
+                            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divArticlesumInfo" class="largeinfo">
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pArticleSumLeft" class="aleft">
+                                    Summa artiklar:</p>
+                                <p class="aright">
+
+                                    Totalt inkl. moms:
+                                    <span ng-bind="subtotal"></span><span> kr</span></p>
+                            </div>
+                            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divArticleSumVATInfo" class="smallinfo">
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pArticleSumVATLeft" class="aleft">
+                                    varav moms:</p>
+                                <p class="aright">
+
+                                    varav moms:
+                                    <span ng-bind="moms"></span><span> kr</span></p>
+                            </div>
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divPaymentCost" class="itemtotals">
+                            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divPaymentCostInfo" class="largeinfo">
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pPaymentCostLeft" class="aleft">
+                                    Avgift för Klarna Faktura:</p>
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pPaymentCostRight" class="aright">
+                                    29 kr</p>
+                            </div>
+                            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divPaymentCostVATInfo" class="smallinfo">
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pPaymentCostVATLeft" class="aleft">
+                                    varav moms:</p>
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pPaymentCostVATRight" class="aright">
+                                    6 kr</p>
+                            </div>
+                        </div>
+                        <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divFreightCost" class="itemtotals">
+                            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divFreightCostInfo" class="largeinfo">
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pFreightCostLeft" class="aleft">
+                                    Fraktavgift:</p>
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pFreightCostRight" class="aright">
+                                    0 kr</p>
+                            </div>
+                            <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divFreightCostVAT" class="smallinfo">
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pFreightCostVATLeft" class="aleft">
+                                    varav moms:</p>
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pFreightCostVATRight" class="aright">
+                                    0 kr</p>
+                            </div>
+                        </div>
+                        <div class="itemtotals" ng-show="discount">
+                            <div class="largeinfo">
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pFreightCostLeft" class="aleft">
+                                    Rabatt:</p>
+                                <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pFreightCostRight" class="aright">
+                                    20%</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div style="float: none;">
+                    </div>
+                    <div id="FreeFreight_CheckoutConfirm" onclick="SwitchExpand(this);"></div>
+
+
+                    <div id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_divGrandtotal" class="grandtotal fast-cart-summary" style="border-radius: 5px;">
+
+                        <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pTotalSum" class="totalsum">
+                            Totalt inkl. moms:
+                        <span class="totalsumnumber" ng-bind="totalsumnumber"></span><span> kr</span></p>
+                        <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pSumToPayVAT" class="totalvat">
+                            varav moms:
+                        <span ng-bind="totalmoms"></span><span> kr</span></p>
+                    </div>
+
+                </div>
+
+                <div id="ctl00_main_fastcheckout_FastOrderConfirmation_divFastOrderConfirmationSubmitter" class="submitter">
+                    <a ng-click="confirm()" tabindex="410" class="css nextstep-btn"><span id="ctl00_main_fastcheckout_FastOrderConfirmation_lblApprovePaymentInfoAndTermsButton" class="fast-submit-btn-text">Slutför beställning</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
