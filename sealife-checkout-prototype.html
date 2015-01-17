@@ -200,10 +200,10 @@
 
                                 <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pTotalSum" class="totalsum">
                                     Totalt inkl. moms:
-                        <span ng-bind="totalsumnumber"></span><span> kr</span></p>
+                        <span>{{totalsumnumber | number:2 | removeComma }}</span><span> kr</span></p>
                                 <p id="ctl00_main_fastcheckout_FastCart_FastCartSummary_pSumToPayVAT" class="totalvat">
                                     varav moms:
-                        <span ng-bind="totalmoms"></span><span> kr</span></p>
+                        <span>{{totalmoms | number:2 | removeComma }}</span><span> kr</span></p>
                             </div>
                         </div>
 
@@ -746,10 +746,10 @@ updatepanel">
 
                         <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pTotalSum" class="totalsum">
                             Totalt inkl. moms:
-                        <span class="totalsumnumber" ng-bind="totalsumnumber"></span><span> kr</span></p>
+                        <span class="totalsumnumber">{{totalsumnumber | number:2 | removeComma }}</span><span> kr</span></p>
                         <p id="ctl00_main_fastcheckout_FastOrderConfirmation_FastCartSummary_pSumToPayVAT" class="totalvat">
                             varav moms:
-                        <span ng-bind="totalmoms"></span><span> kr</span></p>
+                        <span>{{totalmoms | number:2 | removeComma }}</span><span> kr</span></p>
                     </div>
 
                 </div>
