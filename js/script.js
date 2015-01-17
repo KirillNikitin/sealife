@@ -52,10 +52,6 @@
                     $rootScope.totalsumnumber = $scope.totalsumnumber;
                     $rootScope.totalmoms = $scope.totalmoms;
 
-                    //$rootScope.totalsumnumber = $scope.subtotal + 29;
-                    //$rootScope.totalmoms = $scope.moms + 6;
-                    //$rootScope.totalsumnumber =  parseFloat((($scope.totalsumnumber)*=0.8).toFixed(2));
-                    //$rootScope.totalmoms = parseFloat((($scope.totalmoms)*=0.8).toFixed(2));
 
                 } else {
                     alert('Please, enter an numeric value.');
@@ -76,10 +72,6 @@
                     $rootScope.totalsumnumber = $scope.totalsumnumber;
                     $rootScope.totalmoms = $scope.totalmoms;
 
-                    //$rootScope.totalsumnumber = $scope.subtotal + 29;
-                    //$rootScope.totalmoms = $scope.moms + 6;
-                    //$rootScope.totalsumnumber =  parseFloat((($scope.totalsumnumber)*=0.8).toFixed(2));
-                    //$rootScope.totalmoms = parseFloat((($scope.totalmoms)*=0.8).toFixed(2));
                 }
             } else {
                 if(parseInt($scope.item1Quantity)) {
@@ -140,10 +132,6 @@
                     $rootScope.totalsumnumber = $scope.totalsumnumber;
                     $rootScope.totalmoms = $scope.totalmoms;
 
-                    //$rootScope.totalsumnumber = $scope.subtotal + 29;
-                    //$rootScope.totalmoms = $scope.moms + 6;
-                    //$rootScope.totalsumnumber =  parseFloat((($scope.totalsumnumber)*=0.8).toFixed(2));
-                    //$rootScope.totalmoms = parseFloat((($scope.totalmoms)*=0.8).toFixed(2));
 
 
                 } else {
@@ -165,10 +153,6 @@
                     $rootScope.totalsumnumber = $scope.totalsumnumber;
                     $rootScope.totalmoms = $scope.totalmoms;
 
-                    //$rootScope.totalsumnumber = $scope.subtotal + 29;
-                    //$rootScope.totalmoms = $scope.moms + 6;
-                    //$rootScope.totalsumnumber = parseFloat((($scope.totalsumnumber)*=0.8).toFixed(2));
-                    //$rootScope.totalmoms =  parseFloat((($scope.totalmoms)*=0.8).toFixed(2));
                 }
             } else {
                 if(parseInt($scope.item2Quantity)) {
@@ -268,10 +252,66 @@
 
     }]);
 
-    app.controller('valjLand', ['$scope', function($scope){
+    app.controller('valjLand', ['$scope', '$rootScope', function($scope, $rootScope){
         $scope.selectLand = function() {
             var target = angular.element(event.target);
         };
+
+        $scope.$watch('land', function(){
+            if ($scope.land == 'Danmark'){
+                $scope.payMethod = 'Kortbetalning';
+                if($scope.bankCardTypeTempDk) {
+                    $scope.bankCardType = $scope.bankCardTypeTempDk;
+                    $rootScope.bankCardType = $scope.bankCardType;
+                } else {
+                    $scope.bankCardType = null;
+                    $rootScope.bankCardType = $scope.bankCardType;
+                }
+            }
+            else {
+                $scope.payMethod = $rootScope.payMethodTemp;
+                $rootScope.payMethod = $rootScope.payMethodTemp;
+                if($scope.bankCardTypeTempSv) {
+                    $scope.bankCardType = $scope.bankCardTypeTempSv;
+                    $rootScope.bankCardType = $scope.bankCardType;
+                } else {
+                    $scope.bankCardType = null;
+                    $rootScope.bankCardType = $scope.bankCardType;
+                }
+            }
+            $rootScope.land = $scope.land;
+        });
+
+        $scope.$watch('payMethod', function(){
+            if ($scope.land == 'Sverige') {
+                $rootScope.payMethodTemp = $scope.payMethod;
+                $rootScope.bankCardType = $scope.bankCardTypeTempSv;
+            }
+            else {
+                $rootScope.bankCardType = $scope.bankCardTypeTempDk;
+            }
+            $rootScope.payMethod = $scope.payMethod;
+        });
+
+        $scope.$watch('bankCardType', function(){
+            if ($scope.land == 'Danmark'){
+                $scope.bankCardTypeTempDk = $scope.bankCardType;
+                $rootScope.bankCardType = $scope.bankCardType;
+            }
+            else {
+                $scope.bankCardTypeTempSv = $scope.bankCardType;
+                $rootScope.bankCardType = $scope.bankCardType;
+            }
+        });
+
+        $scope.$watch('selectPayTimeType', function(){
+            $rootScope.selectPayTimeType = $scope.selectPayTimeType;
+        })
+
+
+
+
+
 
     }]);
 
@@ -298,10 +338,9 @@
                 alert('Check e-mail typing correctly.')
             }
             else {
-                alert('Have a look at console. (Push F12 key, and choose "Console", The array there!)');
-                console.log("Total sum: "+$rootScope.totalsumnumber+" kr.; Total moms: "+$rootScope.moms+" kr.; Name: "
-                +$rootScope.customerName+"; Surename: "+$rootScope.customerSureName+"; Address: "+$rootScope.customerAddress+"; Extra Address: "
-                +$rootScope.extraAddress+"; Postcode: "+$rootScope.postCode+"; Ort: "+$rootScope.ort+"; E-mail: "+$rootScope.email+"; Discount: "+$rootScope.rabatt);
+                alert('Have a look at console. (Push F12 key, and choose "Console", The info array there!)');
+                console.log("Total sum: "+$rootScope.totalsumnumber+" kr.; Total moms: "+$rootScope.moms+" kr.; Land: "+$rootScope.land+"; Paymethod: "+$rootScope.payMethod+"; Bank Card: "+$rootScope.bankCardType+"; Pay time type: "+$rootScope.selectPayTimeType+"; Delivery: Paket 2-5 dagar; Name: "
+                +$rootScope.customerName+"; Surename: "+$rootScope.customerSureName+"; Address: "+$rootScope.customerAddress+"; Extra Address: "+$rootScope.extraAddress+"; Postcode: "+$rootScope.postCode+"; Ort: "+$rootScope.ort+"; E-mail: "+$rootScope.email+"; Discount: "+$rootScope.rabatt);
 
             }
 

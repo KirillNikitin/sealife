@@ -254,19 +254,19 @@
                 <div id="ctl00_main_fastcheckout_FastPaymentSelector_divFastPaymentSelectorOptionsList_SV" ng-show="tab === 'Sv'" class="optionslist">
 
 
-                   <label class="pay-type-method"><input type="radio" ng-model="payMethodSweden" value="payMethodSweden1" name="payMethodSweden"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl00_spanPaymentIcon" class="paymenticon payment-13 payment-13-SE"></span><br>
+                   <label class="pay-type-method"><input type="radio" ng-model="payMethod" name="payMethodSweden" value="Klarna Faktura - 14 dagar" ng-change="tabPay = 'payMethodSweden1'"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl00_spanPaymentIcon" class="paymenticon payment-13 payment-13-SE"></span><br>
                         <span class="pay-desc" title="Klarna Faktura - 14 dagar">Klarna Faktura - 14 dagar</span>
                    </label>
-                   <label class="pay-type-method"><input type="radio" ng-model="payMethodSweden" value="payMethodSweden2" name="payMethodSweden"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl01_spanPaymentIcon" class="paymenticon payment-4 payment-4-SE"></span><br>
+                   <label class="pay-type-method"><input type="radio" ng-model="payMethod" value="Kortbetalning" name="payMethodSweden" ng-change="tabPay = 'payMethodSweden2'"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl01_spanPaymentIcon" class="paymenticon payment-4 payment-4-SE"></span><br>
                         <span class="pay-desc" title="Kortbetalning">Kortbetalning</span>
                    </label>
-                   <label class="pay-type-method"><input type="radio" ng-model="payMethodSweden" value="payMethodSweden3" name="payMethodSweden"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl02_spanPaymentIcon" class="paymenticon payment-14 payment-14-SE"></span><br>
+                   <label class="pay-type-method"><input type="radio" ng-model="payMethod" value="Klarna Konto" name="payMethodSweden" ng-change="tabPay = 'payMethodSweden3'"/><span id="ctl00_main_fastcheckout_FastPaymentSelector_repButtons_ctl02_spanPaymentIcon" class="paymenticon payment-14 payment-14-SE"></span><br>
                         <span class="pay-desc" title="Klarna Konto">Klarna Konto</span>
                    </label>
                     <div class="methods-desc">
                         <div class="payment-options">
                             <div class="payment-options-inner">
-                                <div ng-show="payMethodSweden == 'payMethodSweden1'">
+                                <div ng-show="tabPay == 'payMethodSweden1'">
                                     <span class="spanPaymentTypePaymentMessageValue">
                                         <!--KLARNA AGREEMENT START-->
                                             Betala 14 dagar i efterskott.<br>
@@ -274,32 +274,32 @@
                                         <!--KLARNA AGREEMENT END-->
                                     </span>
                                 </div>
-                                <div ng-show="payMethodSweden == 'payMethodSweden2'">
+                                <div ng-show="tabPay == 'payMethodSweden2'">
                                     <div class="paymentInfoPaymentSelectCardEdit">
                                         <span class="FastPaymentSelectLabelCard">Korttyp:</span>
-                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" /><span>VISA</span></label>
-                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" /><span>MasterCard</span></label>
-                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" /><span>Diners</span></label>
+                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" ng-model="bankCardType" value="VISA"/><span>VISA</span></label>
+                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" ng-model="bankCardType" value="MasterCard"/><span>MasterCard</span></label>
+                                            <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeSw" ng-model="bankCardType" value="Diners"/><span>Diners</span></label>
                                     </div>
                                 </div>
-                                <div ng-show="payMethodSweden == 'payMethodSweden3'">
+                                <div ng-show="tabPay == 'payMethodSweden3'">
                                     <div class="paymentInfoPaymentSelectHirePurchaseEdit">
                                         <div class="hire-purchase-list">
                                             <span class="FastPaymentSelectLabelHirePurchase">Välj alternativ:</span>
 
-                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>Handla nu - Betala i slutet av januari</span><span class="payTimePrice">16.214 kr</span><img title="Minsta kostnad är 1 kr" src="i/help.png">
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" ng-model="selectPayTimeType" value="Handla nu - Betala i slutet av januari - 16.214 kr"/><span>Handla nu - Betala i slutet av januari</span><span class="payTimePrice">16.214 kr</span><img title="Minsta kostnad är 1 kr" src="i/help.png">
                                             </label>
-                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>3 mån</span><span class="payTimePrice">5.456 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" ng-model="selectPayTimeType" value="3 mån - 5.456 kr"/><span>3 mån</span><span class="payTimePrice">5.456 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
                                             </label>
-                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>6 mån</span><span class="payTimePrice">2.759 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" ng-model="selectPayTimeType" value="6 mån - 2.759 kr"/><span>6 mån</span><span class="payTimePrice">2.759 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
                                             </label>
-                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>12 mån</span><span class="payTimePrice">1.402 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" ng-model="selectPayTimeType" value="12 mån - 1.402 kr"/><span>12 mån</span><span class="payTimePrice">1.402 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
                                             </label>
-                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>24 mån</span><span class="payTimePrice">791 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" ng-model="selectPayTimeType" value="24 mån - 791 kr"/><span>24 mån</span><span class="payTimePrice">791 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
                                             </label>
-                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>Konto</span><span class="payTimePrice">849 kr</span><img title="Minsta kostnad är 1 kr" src="i/help.png">
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" ng-model="selectPayTimeType" value="Konto - 849 kr"/><span>Konto</span><span class="payTimePrice">849 kr</span><img title="Minsta kostnad är 1 kr" src="i/help.png">
                                             </label>
-                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" /><span>36 mån</span><span class="payTimePrice">560 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
+                                            <label class="select-paytime-type"><input type="radio" class="select-paytime-type" name="selectPayTimeType" ng-model="selectPayTimeType" value="36 mån - 560 kr"/><span>36 mån</span><span class="payTimePrice">560 kr</span><img title="Minsta kostnad är 1.000 kr" src="i/help.png">
                                             </label>
 
                                         </div>
@@ -313,7 +313,7 @@
                 </div>
                 <div id="ctl00_main_fastcheckout_FastPaymentSelector_divFastPaymentSelectorOptionsList_DK" ng-show="tab === 'Dk'" class="optionslist">
 
-                    <label class="pay-type-method selected"><input type="radio" ng-model="payMethodDenmark" name="payMethodDenmark" checked="checked"><span class="paymenticon payment-4"></span><br>
+                    <label class="pay-type-method selected"><input type="radio" ng-model="payMethod" name="payMethodDenmark" checked="checked" value="Kortbetalning"><span class="paymenticon payment-4"></span><br>
                         <span class="pay-desc" title="Kortbetalning">Kortbetalning</span>
                     </label>
                     <div class="methods-desc">
@@ -322,9 +322,9 @@
                                 <div>
                                     <div class="paymentInfoPaymentSelectCardEdit">
                                         <span class="FastPaymentSelectLabelCard">Korttyp:</span>
-                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" /><span>VISA</span></label>
-                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" /><span>MasterCard</span></label>
-                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" /><span>Diners</span></label>
+                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" ng-model="bankCardType" value="VISA"/><span>VISA</span></label>
+                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" ng-model="bankCardType" value="MasterCard"/><span>MasterCard</span></label>
+                                        <label class="select-card-type"><input type="radio" class="select-card-type" name="selectCardTypeDk" ng-model="bankCardType" value="Diners"/><span>Diners</span></label>
                                     </div>
                                 </div>
                             </div>
