@@ -339,13 +339,10 @@
             }
             else {
                 alert('Have a look at console. (Push F12 key, and choose "Console", The info array there!)');
-                console.log("Total sum: "+$rootScope.totalsumnumber+" kr.; Total moms: "+$rootScope.moms+" kr.; Land: "+$rootScope.land+"; Paymethod: "+$rootScope.payMethod+"; Bank Card: "+$rootScope.bankCardType+"; Pay time type: "+$rootScope.selectPayTimeType+"; Delivery: Paket 2-5 dagar; Name: "
+                console.log("Total sum: "+parseFloat(($rootScope.totalsumnumber).toFixed(2))+" kr.; Total moms: "+parseFloat(($rootScope.moms).toFixed(2))+" kr.; Land: "+$rootScope.land+"; Paymethod: "+$rootScope.payMethod+"; Bank Card: "+$rootScope.bankCardType+"; Pay time type: "+$rootScope.selectPayTimeType+"; Delivery: Paket 2-5 dagar; Name: "
                 +$rootScope.customerName+"; Surename: "+$rootScope.customerSureName+"; Address: "+$rootScope.customerAddress+"; Extra Address: "+$rootScope.extraAddress+"; Postcode: "+$rootScope.postCode+"; Ort: "+$rootScope.ort+"; E-mail: "+$rootScope.email+"; Discount: "+$rootScope.rabatt);
-
             }
-
-            }
-
+        }
     }])
 
 
