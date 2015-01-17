@@ -714,6 +714,7 @@ input[type="text"].disabled {background: #eee;}
 }
 
 .submitter a.css:hover {
+    cursor: hover;
     background: rgba(128,176,60,1);
     background: -moz-linear-gradient(top, rgba(128,176,60,1) 0%, rgba(128,176,60,1) 1%, rgba(126,174,58,1) 49%, rgba(126,174,58,1) 51%, rgba(113,161,45,1) 54%, rgba(101,149,33,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(128,176,60,1)), color-stop(1%, rgba(128,176,60,1)), color-stop(49%, rgba(126,174,58,1)), color-stop(51%, rgba(126,174,58,1)), color-stop(54%, rgba(113,161,45,1)), color-stop(100%, rgba(101,149,33,1)));
